@@ -5,11 +5,14 @@ using UnityEngine;
 public class PrinterEventManager : MonoBehaviour, Interaface.IGameEvent
 {
     [Header("UI")]
-    public GameObject eventlUI;
-    public TextMeshProUGUI descriptionText;
+    [SerializeField] private GameObject eventlUI;
+    [SerializeField] private TextMeshProUGUI descriptionText;
 
-    [Header("Printer Database")]
-    public List<PrinterEventData> printerEvents;
+    [Header("Printer Interactions")]
+    [SerializeField] private PrinterBase printerBase;
+
+    [Header("Printer DataBase")]
+    [SerializeField] private List<PrinterEventData> printerEvents;
 
     public bool IsScam { get; private set; }
     private PrinterEventData currentData;
