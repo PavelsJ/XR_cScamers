@@ -7,6 +7,9 @@ public class EmailEventManager : MonoBehaviour, Interaface.IGameEvent
     [Header("UI")]
     public GameObject eventlUI;
     public TextMeshProUGUI descriptionText;
+    
+    [Header("Email Interactions")]
+    [SerializeField] private EmailBase emailBase;
 
     [Header("Email Database")]
     public List<EmailEventData> emailEvents;
@@ -33,6 +36,8 @@ public class EmailEventManager : MonoBehaviour, Interaface.IGameEvent
         
         descriptionText.text = currentData.description;
         Debug.Log($"Generated Email: {currentData.name} | Scam: {IsScam}");
+        
+        emailBase.SpawnEmail(currentData);
     }
 
     public void EndEvent()

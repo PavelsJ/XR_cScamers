@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class PaperBase : MonoBehaviour
+public class LetterBase : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI descriptionText;
     public void UpdateInfo(string description)

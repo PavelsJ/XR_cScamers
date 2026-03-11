@@ -73,16 +73,16 @@ public class EventManager : MonoBehaviour
     }
     
     // Общие кнопки для всех эвентов
-    public void PlayerPressedA()
-    {
-        if (!isWaitingForDecision) return;
-        HandleDecision(true);
-    }
-
-    public void PlayerPressedB()
+    public void PlayerPressedKey1()
     {
         if (!isWaitingForDecision) return;
         HandleDecision(false);
+    }
+
+    public void PlayerPressedKey2()
+    {
+        if (!isWaitingForDecision) return;
+        HandleDecision(true);
     }
 
     private void HandleDecision(bool playerThinksScam)

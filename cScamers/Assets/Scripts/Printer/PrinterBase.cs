@@ -3,19 +3,20 @@ using UnityEngine;
 public class PrinterBase : MonoBehaviour
 {
     [SerializeField] GameObject printPrefab;
-    private PaperBase currentPaper;
+    [SerializeField] Transform spawnPoint;
+    private LetterBase currentPaper;
 
     public void SpawnPaper(PrinterEventData data)
     {
-        GameObject paper = Instantiate(printPrefab, transform);
-        var paperBase = paper.GetComponent<PaperBase>();
+        GameObject paper = Instantiate(printPrefab, spawnPoint);
+        var paperBase = paper.GetComponent<LetterBase>();
         if (paperBase == null) return;
         
         paperBase.UpdateInfo(data.description);
-        ThrowPaper(paper, 2);
+        ThrowLetter(paper, 2);
     }
 
-    private void ThrowPaper(GameObject paper, float force = 2f)
+    private void ThrowLetter(GameObject paper, float force = 2f)
     {
         if (paper == null) return;
 

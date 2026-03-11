@@ -36,6 +36,8 @@ public class PrinterEventManager : MonoBehaviour, Interaface.IGameEvent
         
         descriptionText.text = currentData.description;
         Debug.Log($"Generated Email: {currentData.name} | Scam: {IsScam}");
+        
+        printerBase.SpawnPaper(currentData);
     }
 
     public void EndEvent()

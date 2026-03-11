@@ -7,6 +7,9 @@ public class PhoneEventManager : MonoBehaviour, Interaface.IGameEvent
     [Header("UI")]
     public GameObject eventlUI;
     public TextMeshProUGUI descriptionText;
+    
+    [Header("Phone Interactions")]
+    [SerializeField] private PhoneBase phoneBase;
 
     [Header("Phone Database")]
     public List<PhoneEventData> phoneEvents;
@@ -33,6 +36,8 @@ public class PhoneEventManager : MonoBehaviour, Interaface.IGameEvent
         
         descriptionText.text = currentData.description;
         Debug.Log($"Generated Email: {currentData.name} | Scam: {IsScam}");
+        
+        phoneBase.SpawnPhoneCall(currentData);
     }
 
     public void EndEvent()
