@@ -16,7 +16,7 @@ public class PrinterBase : MonoBehaviour
         ThrowLetter(paper, 2);
     }
 
-    private void ThrowLetter(GameObject paper, float force = 2f)
+    private void ThrowLetter(GameObject paper, float force = 10f)
     {
         if (paper == null) return;
 

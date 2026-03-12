@@ -32,7 +32,7 @@ public class EventManager : MonoBehaviour
 
     public void StartEvent()
     {
-        currentEvent = GetRandomEvent();
+        currentEvent = printerManager;
 
         if (currentEvent != null)
         {
