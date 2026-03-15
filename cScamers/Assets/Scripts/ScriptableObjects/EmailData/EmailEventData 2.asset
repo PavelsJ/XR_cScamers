@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: EmailEventData 2
   m_EditorClassIdentifier: Assembly-CSharp::EmailEventData
   isScam: 1
+  popup: New Email...
   description: Give me my money

@@ -28,7 +28,7 @@ public class PrinterEventManager : MonoBehaviour, Interaface.IGameEvent
         eventlUI.SetActive(true);
         GenerateEmail();
     }
-
+   
     void GenerateEmail()
     {
         currentData = printerEvents[Random.Range(0, printerEvents.Count)];
@@ -43,5 +43,6 @@ public class PrinterEventManager : MonoBehaviour, Interaface.IGameEvent
     public void EndEvent()
     {
         eventlUI.SetActive(false);
+        printerBase.ClearPrinter();
     }
 }

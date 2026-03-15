@@ -140,6 +140,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  pressDepth: 0.5
+  pressSpeed: 8
 --- !u!1 &707881556325279417
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa17ea2fd84c9544796b2822dfec3f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  leftKey: 0
+  rightKey: 0
   keys:
   - {fileID: 2130180437164511800}
   - {fileID: 129417616993157878}
@@ -362,6 +366,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  pressDepth: 0.5
+  pressSpeed: 8
 --- !u!1 &7604167910658029070
 GameObject:
   m_ObjectHideFlags: 0

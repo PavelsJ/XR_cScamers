@@ -29,6 +29,7 @@ public class PhoneEventManager : MonoBehaviour, Interaface.IGameEvent
         GenerateEmail();
     }
 
+
     void GenerateEmail()
     {
         currentData = phoneEvents[Random.Range(0, phoneEvents.Count)];
@@ -43,5 +44,6 @@ public class PhoneEventManager : MonoBehaviour, Interaface.IGameEvent
     public void EndEvent()
     {
         eventlUI.SetActive(false);
+        phoneBase.ClearPhone();
     }
 }

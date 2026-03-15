@@ -43,5 +43,6 @@ public class EmailEventManager : MonoBehaviour, Interaface.IGameEvent
     public void EndEvent()
     {
         eventlUI.SetActive(false);
+        emailBase.ClearEmail();
     }
 }

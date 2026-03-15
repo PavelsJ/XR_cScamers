@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: PrinterEventData 1
   m_EditorClassIdentifier: Assembly-CSharp::PrinterEventData
   isScam: 1
+  popup: Printing...
   description: Give me my money
