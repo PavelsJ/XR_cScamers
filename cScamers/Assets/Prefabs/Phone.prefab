@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2369535540730992438}
   - component: {fileID: 1003940167161067591}
   - component: {fileID: 7377033442367718367}
+  - component: {fileID: 2289257814751099741}
   - component: {fileID: 2805617394260392890}
   - component: {fileID: 9039133258365050353}
   - component: {fileID: 7609864605238087341}
@@ -109,7 +110,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   popupText: {fileID: 0}
-  descriptionText: {fileID: 0}
+  meshRenderer: {fileID: 5410200555311565328}
+  screenMaterial: {fileID: 2100000, guid: 6ebee210131550a4f9653fb206d4f504, type: 2}
+--- !u!114 &2289257814751099741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790161595438755282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2f7e309465bdd4c9700bc1e46acb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigeonTarget
+  minY: -0.5
 --- !u!114 &2805617394260392890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,13 +223,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5989887344682915664}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 0.8, y: 1, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4970388208075283067}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &4274233494606161114
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -341,7 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 076017b9-895a-422e-9ad1-9855cd67ef2a
+  instanceId: ee62f1cd-8a1b-4d2c-b573-961a81dd8cc3
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -427,7 +442,19 @@ MonoBehaviour:
   _interactableView: {fileID: 1600149953904240788}
   _whenHover:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7377033442367718367}
+        m_TargetAssemblyTypeName: PhoneBase, Assembly-CSharp
+        m_MethodName: AnswerCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _whenUnhover:
     m_PersistentCalls:
       m_Calls: []

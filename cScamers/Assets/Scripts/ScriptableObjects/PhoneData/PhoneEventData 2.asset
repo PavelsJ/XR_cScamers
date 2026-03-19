@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: PhoneEventData 2
   m_EditorClassIdentifier: Assembly-CSharp::PhoneEventData
   isScam: 1
-  popup: Calling...
+  isMessage: 0
+  popup: Calling
   description: Give me my money
+  eventData:
+    nextEventsTrue: []
+    nextEventsFalse: []

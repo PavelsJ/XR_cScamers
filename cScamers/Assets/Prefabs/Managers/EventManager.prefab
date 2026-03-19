@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EmailEventManager
   eventlUI: {fileID: 0}
   descriptionText: {fileID: 0}
+  emailBase: {fileID: 0}
   emailEvents:
   - {fileID: 11400000, guid: 68181110dc999bb4683c6202444aa3fc, type: 2}
   - {fileID: 11400000, guid: fa028e9d84099ce45bb52b6204ba97f7, type: 2}
@@ -60,6 +61,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6238763380899886703}
   - component: {fileID: 6471363508364797981}
+  - component: {fileID: 4904131100263289151}
   m_Layer: 0
   m_Name: EventManager
   m_TagString: Untagged
@@ -75,7 +77,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4381476545750730766}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -100,6 +102,19 @@ MonoBehaviour:
   emailManager: {fileID: 8807731977146671287}
   phoneManager: {fileID: 4953071958267550928}
   printerManager: {fileID: 2942158431758091059}
+--- !u!114 &4904131100263289151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4381476545750730766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41ec9d7bfbac064fb8c4dc7a0775db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  pigeon: {fileID: 0}
 --- !u!1 &6719195640593848014
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PrinterEventManager
   eventlUI: {fileID: 0}
   descriptionText: {fileID: 0}
+  printerBase: {fileID: 0}
   printerEvents:
   - {fileID: 11400000, guid: f0134809595482d44ab8f7dfa474f1c2, type: 2}
   - {fileID: 11400000, guid: 67da0333b20b33e469ec74141f83f406, type: 2}
@@ -196,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PhoneEventManager
   eventlUI: {fileID: 0}
   descriptionText: {fileID: 0}
+  phoneBase: {fileID: 0}
   phoneEvents:
   - {fileID: 11400000, guid: fc2e2c4e2684cfa4fb463ac4dea6fa4b, type: 2}
   - {fileID: 11400000, guid: 2f0673bf3b48cb649888647036a61709, type: 2}

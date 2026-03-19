@@ -36,6 +36,14 @@ public class PhoneBase : MonoBehaviour
         phoneRoutine = StartCoroutine(PhoneCallRoutine());
     }
     
+    public void UpdatePhoneCall(PhoneEventData data)
+    {
+        popupText.text = data.popup;
+        
+        if (phoneRoutine != null)
+            StopCoroutine(phoneRoutine);
+    }
+    
     public void ClearPhone()
     {
         isCalling = false;

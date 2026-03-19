@@ -44,7 +44,7 @@ public class PrinterBase : MonoBehaviour
         popupText.text = "";
     }
 
-    private void ThrowLetter(GameObject paper, float force = 10f)
+    private void ThrowLetter(GameObject paper, float force = 5f)
     {
         if (paper == null) return;
 

@@ -37,7 +37,7 @@ public class MarkerBase : MonoBehaviour
 
             if (sourceTex == null)
             {
-                Debug.LogError($"{rend.gameObject.name} doesnt have texture 2d");
+                Debug.Log($"{rend.gameObject.name} doesnt have texture 2d");
                 return;
             }
 

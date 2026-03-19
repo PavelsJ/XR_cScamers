@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4607436659282432042}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.05}
   m_LocalScale: {x: 0.9, y: 0.5, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6613126089664652817}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &6747745008429490379
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ Transform:
   m_GameObject: {fileID: 6378259288162077618}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0.35, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 7674961497918192607}
   - component: {fileID: 4225392653919376843}
   - component: {fileID: 3463726399642668369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KeyObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,13 +383,13 @@ MonoBehaviour:
   keyAction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8713358042863102042}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 3998622773821325357}
+        m_TargetAssemblyTypeName: EmailBase, Assembly-CSharp
+        m_MethodName: ToggleScreen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -446,4 +446,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1afe51644f6410843bb7080b6a24e898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  screenMaterial: {fileID: 0}
+  popupPanel: {fileID: 0}
+  existenceTime: 2
+  popupText: {fileID: 0}
+  descriptionText: {fileID: 0}
+  meshRenderer: {fileID: 7809623244140431780}
+  screenMaterial: {fileID: 2100000, guid: c5470e24fb702b841b7ba6f7a45b49ed, type: 2}

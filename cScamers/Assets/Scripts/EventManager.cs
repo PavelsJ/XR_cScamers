@@ -14,9 +14,6 @@ public class EventManager : MonoBehaviour
     [SerializeField] private PhoneEventManager phoneManager;
     [SerializeField] private PrinterEventManager printerManager;
 
-    [Header("Pigeon")]
-    [SerializeField] private PigeonBase pigeonBase;
-
     private IGameEvent currentEvent;
     private EventType? lastEventType = null;
     private bool isWaitingForDecision = false;
@@ -85,28 +82,30 @@ public class EventManager : MonoBehaviour
     // Общие кнопки для всех эвентов
     public void PlayerPressedKey1()
     {
-        if (!isWaitingForDecision) return;
         HandleDecision(false);
     }
 
     public void PlayerPressedKey2()
     {
-        if (!isWaitingForDecision) return;
         HandleDecision(true);
     }
 
     private void HandleDecision(bool playerThinksScam)
     {
-        isWaitingForDecision = false;
+        if (!isWaitingForDecision) return;
 
         bool correct = currentEvent.IsScam == playerThinksScam;
         Debug.Log($"{currentEvent.GetType().Name}: {(correct ? "Correct!" : "Wrong!")}");
         
-        currentEvent.EndEvent();
+        currentEvent.PlayerChoice(playerThinksScam);
         
-        if (decisionCoroutine != null) StopCoroutine(decisionCoroutine);
-        float delay = Random.Range(1f, 2f);
-        decisionCoroutine = StartCoroutine(DecisionCoroutine(delay));
+        if (!currentEvent.IsChainActive)
+        {
+            if (decisionCoroutine != null) StopCoroutine(decisionCoroutine);
+
+            float delay = Random.Range(1f, 2f);
+            decisionCoroutine = StartCoroutine(DecisionCoroutine(delay));
+        }
     }
 
     private IEnumerator DecisionCoroutine(float delay)

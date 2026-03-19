@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a6613000ac290a458522b77a8b5ef81, type: 3}
-  m_Name: PrinterEventData 1
+  m_Name: PrinterEventData 4
   m_EditorClassIdentifier: Assembly-CSharp::PrinterEventData
   isScam: 1
   popup: Printing...
-  description: Give me my money
-  nextEventsIfScammer: {fileID: 11400000, guid: 2ad9beecd0582d64cbc2cab22a0d2af7, type: 2}
+  description: I sad GIVE NE MY MONEY
+  nextEventsIfScammer: {fileID: 11400000, guid: 0b2cf108b4254674e9fca2c5c2add17d, type: 2}
   nextEventsIfNormal: {fileID: 0}

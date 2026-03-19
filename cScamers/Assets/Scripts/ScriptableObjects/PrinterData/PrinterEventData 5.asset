@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed13a9da04557864594d992d1e750562, type: 3}
-  m_Name: EmailEventData 3
-  m_EditorClassIdentifier: Assembly-CSharp::EmailEventData
-  isScam: 0
-  popup: "You have an \nincoming email"
-  description: Hello i am not scamer
+  m_Script: {fileID: 11500000, guid: 0a6613000ac290a458522b77a8b5ef81, type: 3}
+  m_Name: PrinterEventData 5
+  m_EditorClassIdentifier: Assembly-CSharp::PrinterEventData
+  isScam: 1
+  popup: Printing...
+  description: PLSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
   nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}

@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: EmailEventData 2
   m_EditorClassIdentifier: Assembly-CSharp::EmailEventData
   isScam: 1
-  popup: New Email...
+  popup: "You have an \nincoming email"
   description: Give me my money
+  nextEventsIfScammer: {fileID: 11400000, guid: d954dafbec3571d4fa20d124f611aa1a, type: 2}
+  nextEventsIfNormal: {fileID: 0}

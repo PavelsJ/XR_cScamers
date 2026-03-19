@@ -5,65 +5,127 @@ using UnityEngine;
 public class PigeonBase : MonoBehaviour
 {
     [SerializeField] private Transform startPoint;
-    [SerializeField] private Transform screenPoint;
-
-    [SerializeField] private LayerMask interactableLayer;
-
-    private Vector3 currentpoint; 
-    private bool isVaiting = false;
-    private Coroutine vaitingCoroutine;
+    [SerializeField] private Transform playerPoint;
+    [SerializeField] private Transform grabPoint;
+    
+    private State currentState;
+    private Transform targetItem;
+    
+    private Coroutine activeCoroutine;
+    
+    private enum State
+    {
+        Idle,
+        FlyToItem,
+        GrabItem,
+        FlyToPlayer,
+        WaitingForPlayer
+    }
 
     public void ResetState()
     {
-        float randomNum = Random.Range(0, 1);
-        Vector3 resetPoint = Vector3.Lerp(startPoint.position, screenPoint.position, randomNum);
+        currentState = State.Idle;
+        
+        if (activeCoroutine != null)
+            StopCoroutine(activeCoroutine);
+        
+        activeCoroutine = null;
+        targetItem = null;
 
-        if (vaitingCoroutine != null)
-            StopCoroutine(vaitingCoroutine);
-
-        vaitingCoroutine = StartCoroutine(
-            MoveTowardsState(currentpoint, Random.Range(4, 6)));
-           
+        activeCoroutine = StartCoroutine(MoveTowardsTarget(startPoint, 4f));
     }
 
-    public void SetState(Vector3 newState)
+    public void TakeItem(Transform item)
     {
-        if (isVaiting) return;
-        currentpoint = newState;
+        if (activeCoroutine != null)
+            StopCoroutine(activeCoroutine);
 
-        if (vaitingCoroutine != null)
-            StopCoroutine(vaitingCoroutine);
-
-        vaitingCoroutine = StartCoroutine(
-           MoveTowardsState(currentpoint, Random.Range(2, 4)));
+        targetItem = item;
+        currentState = State.FlyToItem;
+        activeCoroutine = StartCoroutine(MoveTowardsItem());
     }
 
-    private IEnumerator MoveTowardsState(Vector3 state, float speed)
+    private IEnumerator MoveTowardsItem()
     {
-        isVaiting = true;
+        yield return MoveTowardsTarget(targetItem, 2f);
+        activeCoroutine = StartCoroutine(GrabItem());
+    }
+    
+    private IEnumerator GrabItem()
+    {
+        currentState = State.GrabItem;
 
-        while (Vector3.Distance(transform.localPosition, state) > 0.01f)
+        targetItem.SetParent(grabPoint);
+        targetItem.localPosition = Vector3.zero;
+
+        yield return new WaitForSeconds(0.5f);
+
+        activeCoroutine = StartCoroutine(FlyToPlayer());
+    }
+    
+    private IEnumerator FlyToPlayer()
+    {
+        currentState = State.FlyToPlayer;
+
+        yield return MoveTowardsTarget(playerPoint, 2f);
+
+        StartWaitingForPlayer();
+    }
+    
+    private void StartWaitingForPlayer()
+    {
+        currentState = State.WaitingForPlayer;
+        activeCoroutine = null;
+    }
+    
+    private IEnumerator MoveTowardsTarget(Transform target, float duration)
+    {
+        Vector3 start = transform.position;
+        Vector3 end = target.position;
+        
+        float height = Vector3.Distance(start, end) * 0.3f;
+        Vector3 mid = (start + end) / 2 + Vector3.up * height;
+
+        float time = 0f;
+
+        while (time < duration)
         {
-            transform.localPosition = Vector3.Lerp(
-                transform.localPosition, state,
-                Time.deltaTime * speed
-            );
+            float t = time / duration;
 
+            Vector3 pos = GetBezierPoint(start, mid, end, t);
+            transform.position = pos;
+            
+            Vector3 nextPos = GetBezierPoint(start, mid, end, t + 0.01f);
+            Vector3 dir = (nextPos - pos).normalized;
+
+            if (dir != Vector3.zero)
+            {
+                transform.rotation = Quaternion.Slerp(
+                    transform.rotation,
+                    Quaternion.LookRotation(dir),
+                    6f * Time.deltaTime
+                );
+            }
+
+            time += Time.deltaTime;
             yield return null;
         }
 
-        transform.position = state;
+        transform.position = end;
     }
-
-    private void CheckEvent()
+    
+     public void DropItem()
     {
-        if (isVaiting)
-        {
-            Collider[] hits = Physics.OverlapSphere(transform.position, 2f, interactableLayer);
-            if (hits.Length > 0)
-            {
-                
-            }
-        }
+        if (targetItem != null)
+            targetItem.SetParent(null);
+
+        ResetState();
+    }
+     
+    private Vector3 GetBezierPoint(Vector3 a, Vector3 b, Vector3 c, float t)
+    {
+        return (1 - t) * (1 - t) * a +
+               2 * (1 - t) * t * b +
+               t * t * c;
     }
 }

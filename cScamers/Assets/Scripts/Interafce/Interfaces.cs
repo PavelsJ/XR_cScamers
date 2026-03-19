@@ -3,6 +3,8 @@ namespace Interaface
     public interface IGameEvent
     {
         bool IsScam { get; }
+        bool IsChainActive { get; }
+        void PlayerChoice(bool choseTrue);
         void StartEvent();
         void EndEvent();
     }
@@ -11,4 +13,5 @@ namespace Interaface
     {
         bool IsScam { get; }
     }
+    
 }
