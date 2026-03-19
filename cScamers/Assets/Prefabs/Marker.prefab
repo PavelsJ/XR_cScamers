@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7956450457400406093}
   - component: {fileID: 2882187505330273360}
   - component: {fileID: 5077967479546010142}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 5177866629553065721}
   - component: {fileID: 8926024912042754597}
   - component: {fileID: 1589137800372596630}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: '[BuildingBlock] HandGrabInstallationRoutine'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 3634618167202573209}
   - component: {fileID: 1056046965069800282}
   - component: {fileID: 3447073094003181175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,11 +381,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   point: {fileID: 3232531393610411522}
-  line: {fileID: 3447073094003181175}
   touchRadius: 0.04
   paintableLayer:
     serializedVersion: 2
     m_Bits: 65
+  brushColor: {r: 1, g: 0, b: 0, a: 1}
+  brushSize: 6
 --- !u!114 &4431465432254240776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,7 +575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3232531393610411522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DrawingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,10 +7,15 @@ using Random = UnityEngine.Random;
 
 public class EventManager : MonoBehaviour
 {
+    public static EventManager Instance;
+
     [Header("Event Managers")]
-    public EmailEventManager emailManager;
-    public PhoneEventManager phoneManager;
-    public PrinterEventManager printerManager;
+    [SerializeField] private EmailEventManager emailManager;
+    [SerializeField] private PhoneEventManager phoneManager;
+    [SerializeField] private PrinterEventManager printerManager;
+
+    [Header("Pigeon")]
+    [SerializeField] private PigeonBase pigeonBase;
 
     private IGameEvent currentEvent;
     private EventType? lastEventType = null;
@@ -23,6 +28,11 @@ public class EventManager : MonoBehaviour
         Email,
         PhoneCall,
         Printer
+    }
+
+    private void Awake()
+    {
+        //instance adj.
     }
 
     private void Start()

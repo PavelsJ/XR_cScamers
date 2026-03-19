@@ -7,10 +7,10 @@ public class PrinterBase : MonoBehaviour
     [SerializeField] GameObject printPrefab;
     [SerializeField] Transform spawnPoint;
     private LetterBase currentPaper;
-    
+
     [Header("Pigeon Action")]
-    
-    
+    [SerializeField] private PigeonBase pigeonEvent;
+
     [Header("Email Description")]
     [SerializeField] private TMP_Text popupText;
     

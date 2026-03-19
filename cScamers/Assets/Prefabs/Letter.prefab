@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7336150185040342213}
   - component: {fileID: 5402683553159098823}
   - component: {fileID: 90380011710106764}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Letter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 2614342938448792971}
   - component: {fileID: 768205598251936736}
   - component: {fileID: 212175293942873934}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: DescriptionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 3239877757046395089}
   - component: {fileID: 5854551379703676876}
   - component: {fileID: 1456903864858774039}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: WorldCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 6351417264572140594}
   - component: {fileID: 7193363248686970590}
   - component: {fileID: 4948958744129029626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: '[BuildingBlock] HandGrabInstallationRoutine'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
