@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PrinterEventData 5
   m_EditorClassIdentifier: Assembly-CSharp::PrinterEventData
   isScam: 1
+  deviceType: 2
   popup: Printing...
   description: PLSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
   nextEventsIfScammer: {fileID: 0}

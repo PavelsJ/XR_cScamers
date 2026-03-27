@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PrinterEventData 1
   m_EditorClassIdentifier: Assembly-CSharp::PrinterEventData
   isScam: 1
+  deviceType: 2
   popup: Printing...
   description: Give me my money
   nextEventsIfScammer: {fileID: 11400000, guid: 2ad9beecd0582d64cbc2cab22a0d2af7, type: 2}

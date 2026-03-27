@@ -13,19 +13,10 @@ public class PhoneEventManager : MonoBehaviour, Interaface.IGameEvent
 
     [Header("Phone Database")]
     public List<PhoneEventData> phoneEvents;
+    private EventData currentData;
 
-    public bool IsScam { get; private set; }
-    public bool IsChainActive { get; private set; } = false;
-    
-    private PhoneEventData currentData;
-
-    public void StartEvent()
+    public void GenerateEvent()
     {
-        if (IsChainActive)
-        {
-            return;
-        }
-        
         if (phoneEvents == null || phoneEvents.Count == 0)
         {
             Debug.LogError("No Email Events assigned!");
@@ -39,35 +30,30 @@ public class PhoneEventManager : MonoBehaviour, Interaface.IGameEvent
     void GenerateCall()
     {
         currentData = phoneEvents[Random.Range(0, phoneEvents.Count)];
-        IsScam = currentData.IsScam;
-
+        
         descriptionText.text = currentData.description;
 
-        Debug.Log($"Generated Phone: {currentData.name} | Scam: {IsScam}");
+        Debug.Log($"Generated Phone: {currentData.name} | Scam: {currentData.IsScam}");
 
-        phoneBase.SpawnPhoneCall(currentData);
-        IsChainActive = true;
+        PhoneEventData eventData = currentData as PhoneEventData;
+        bool isMessage = eventData != null && eventData.IsMessage;
+
+        if (isMessage) phoneBase.SpawnPhoneMessage(currentData);
+        else phoneBase.SpawnPhoneCall(currentData);
     }
     
-    public void PlayerChoice(bool choseTrue)
+    public void UpdateEvent(EventData data)
     {
-        if (!IsChainActive) return;
-
-        currentData = choseTrue 
-            ? currentData.nextEventsIfScammer 
-            : currentData.nextEventsIfNormal;
+        currentData = data;
         
-        if (currentData == null)
-        {
-            Debug.Log("Цепочка завершена");
-            IsChainActive = false;
-            EndEvent();
-            return;
-        }
-        
-        phoneBase.UpdatePhoneCall(currentData);
         descriptionText.text = currentData.description;
+        
+        PhoneEventData eventData = currentData as PhoneEventData;
+        bool isMessage = eventData != null && eventData.IsMessage;
 
+        if (isMessage) phoneBase.UpdatePhoneMessage(currentData);
+        else phoneBase.UpdatePhoneCall(currentData);
+        
         Debug.Log($"Next chain step: {currentData.description}");
     }
 
@@ -75,5 +61,10 @@ public class PhoneEventManager : MonoBehaviour, Interaface.IGameEvent
     {
         eventlUI.SetActive(false);
         phoneBase.ClearPhone();
+    }
+    
+    public EventData GetCurrentEvent()
+    {
+        return currentData;
     }
 }

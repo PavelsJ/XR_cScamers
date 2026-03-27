@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c4fec817f91eef4aba1919f9baa94c1, type: 3}
-  m_Name: PhoneEventData 2
+  m_Name: PhoneEventData 4
   m_EditorClassIdentifier: Assembly-CSharp::PhoneEventData
   isScam: 1
   deviceType: 1
   popup: Calling
   description: Give me my money
-  nextEventsIfScammer: {fileID: 11400000, guid: e291d5bd9f2899343849c6114320cb5f, type: 2}
+  nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
-  isMessage: 0
+  isMessage: 1

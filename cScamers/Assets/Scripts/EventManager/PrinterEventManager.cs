@@ -13,21 +13,13 @@ public class PrinterEventManager : MonoBehaviour, Interaface.IGameEvent
 
     [Header("Printer DataBase")]
     [SerializeField] private List<PrinterEventData> printerEvents;
-
-    public bool IsScam { get; private set; }
-    public bool IsChainActive { get; private set; } = false;
     
     private int currentIndex = 0;
     private Queue<string> currentEventQueue = new Queue<string>();
-    private PrinterEventData currentData;
+    private EventData currentData;
 
-    public void StartEvent()
+    public void GenerateEvent()
     {
-        if (IsChainActive)
-        {
-            return;
-        }
-        
         if (printerEvents == null || printerEvents.Count == 0)
         {
             Debug.LogError("No Email Events assigned!");
@@ -41,31 +33,17 @@ public class PrinterEventManager : MonoBehaviour, Interaface.IGameEvent
     void GenerateLetter()
     {
         currentData = printerEvents[Random.Range(0, printerEvents.Count)];
-        IsScam = currentData.IsScam;
 
         descriptionText.text = currentData.description;
-        Debug.Log($"Generated Letter: {currentData.name} | Scam: {IsScam}");
+        Debug.Log($"Generated Letter: {currentData.name} | Scam: {currentData.IsScam}");
         printerBase.SpawnPaper(currentData);
-
-        IsChainActive = true;
+        
         currentEventQueue.Clear();
     }
     
-    public void PlayerChoice(bool choseTrue)
+    public void UpdateEvent(EventData data)
     {
-        if (!IsChainActive) return;
-
-        currentData = choseTrue 
-            ? currentData.nextEventsIfScammer 
-            : currentData.nextEventsIfNormal;
-        
-        if (currentData == null)
-        {
-            Debug.Log("Цепочка завершена");
-            IsChainActive = false;
-            EndEvent();
-            return;
-        }
+        currentData = data;
         
         printerBase.SpawnPaper(currentData);
         descriptionText.text = currentData.description;
@@ -77,5 +55,10 @@ public class PrinterEventManager : MonoBehaviour, Interaface.IGameEvent
     {
         eventlUI.SetActive(false);
         printerBase.ClearPrinter();
+    }
+    
+    public EventData GetCurrentEvent()
+    {
+        return currentData;
     }
 }

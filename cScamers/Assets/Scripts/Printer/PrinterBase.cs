@@ -4,6 +4,7 @@ using UnityEngine;
 public class PrinterBase : MonoBehaviour
 {
     [Header("Printer Action")]
+    [SerializeField] PrinterLight printLight;
     [SerializeField] GameObject printPrefab;
     [SerializeField] Transform spawnPoint;
     private LetterBase currentPaper;
@@ -27,9 +28,10 @@ public class PrinterBase : MonoBehaviour
         meshRenderer.material = currentScreenMaterial;
     }
 
-    public void SpawnPaper(PrinterEventData data)
+    public void SpawnPaper(EventData data)
     {
         popupText.text = data.popup;
+        printLight.SetLight(true);
         
         GameObject paper = Instantiate(printPrefab, spawnPoint.position, spawnPoint.rotation);
         var paperBase = paper.GetComponent<LetterBase>();
@@ -41,6 +43,7 @@ public class PrinterBase : MonoBehaviour
     
     public void ClearPrinter()
     {
+        printLight.SetLight(false);
         popupText.text = "";
     }
 

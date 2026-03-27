@@ -3,20 +3,9 @@ using Interaface;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PhoneEventData", menuName = "Scriptable Objects/PhoneEventData")]
-public class PhoneEventData : ScriptableObject, IEventData
+public class PhoneEventData : EventData
 {
-    [SerializeField] private bool isScam;
-    public bool IsScam => isScam;  
-    
+    [Header("Phone Event")]
     [SerializeField] private bool isMessage;
-    
-    [Header("Popup Description")]
-    [TextArea(2,5)] public string popup;
-    
-    [Header("Phone Description")]
-    [TextArea(4, 10)] public string description;
-    
-    [Header("Next Events")]
-    public PhoneEventData nextEventsIfScammer;
-    public PhoneEventData nextEventsIfNormal;
+    public bool IsMessage => isMessage;  
 }

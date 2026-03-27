@@ -13,21 +13,13 @@ public class EmailEventManager : MonoBehaviour, Interaface.IGameEvent
 
     [Header("Email Database")]
     public List<EmailEventData> emailEvents;
-
-    public bool IsScam { get; private set; }
-    public bool IsChainActive { get; private set; } = false;
     
     private int currentIndex = 0;
     private Queue<string> currentEventQueue = new Queue<string>();
-    private EmailEventData currentData;
+    private EventData currentData;
 
-    public void StartEvent()
+    public void GenerateEvent()
     {
-        if (IsChainActive)
-        {
-            return;
-        }
-        
         if (emailEvents == null || emailEvents.Count == 0)
         {
             Debug.LogError("No Email Events assigned!");
@@ -41,31 +33,17 @@ public class EmailEventManager : MonoBehaviour, Interaface.IGameEvent
     void GenerateEmail()
     {
         currentData = emailEvents[Random.Range(0, emailEvents.Count)];
-        IsScam = currentData.IsScam;
-
+        
         descriptionText.text = currentData.description;
-        Debug.Log($"Generated Email: {currentData.name} | Scam: {IsScam}");
+        Debug.Log($"Generated Email: {currentData.name} | Scam: {currentData.IsScam}");
         emailBase.SpawnEmail(currentData);
         
-        IsChainActive = true;
         currentEventQueue.Clear();
     }
     
-    public void PlayerChoice(bool choseTrue)
+    public void UpdateEvent(EventData data)
     {
-        if (!IsChainActive) return;
-
-        currentData = choseTrue 
-            ? currentData.nextEventsIfScammer 
-            : currentData.nextEventsIfNormal;
-        
-        if (currentData == null)
-        {
-            Debug.Log("Цепочка завершена");
-            IsChainActive = false;
-            EndEvent();
-            return;
-        }
+        currentData = data;
         
         descriptionText.text = currentData.description;
         emailBase.UpdateEmail(currentData);
@@ -77,5 +55,10 @@ public class EmailEventManager : MonoBehaviour, Interaface.IGameEvent
     {
         eventlUI.SetActive(false);
         emailBase.ClearEmail();
+    }
+
+    public EventData GetCurrentEvent()
+    {
+        return currentData;
     }
 }

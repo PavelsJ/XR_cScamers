@@ -29,7 +29,7 @@ public class EmailBase : MonoBehaviour
         meshRenderer.material = currentScreenMaterial;
     }
 
-    public void SpawnEmail(EmailEventData data)
+    public void SpawnEmail(EventData data)
     {
         popupPanel.SetActive(true);
         
@@ -39,7 +39,7 @@ public class EmailBase : MonoBehaviour
         popupAnimationCoroutine = StartCoroutine(WaitForMessage(data));
     }
 
-    private IEnumerator WaitForMessage(EmailEventData data)
+    private IEnumerator WaitForMessage(EventData data)
     {
         float elapsed = 0f;
         int dotIndex = 0;
@@ -60,7 +60,7 @@ public class EmailBase : MonoBehaviour
         descriptionText.text = data.description;
     }
 
-    public void UpdateEmail(EmailEventData data)
+    public void UpdateEmail(EventData data)
     {
         descriptionText.text = data.description;
     }

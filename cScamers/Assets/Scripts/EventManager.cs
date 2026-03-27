@@ -14,16 +14,17 @@ public class EventManager : MonoBehaviour
     [SerializeField] private PhoneEventManager phoneManager;
     [SerializeField] private PrinterEventManager printerManager;
 
-    private IGameEvent currentEvent;
+    private EventData currentData;
     private EventType? lastEventType = null;
-    private bool isWaitingForDecision = false;
+    private IGameEvent currentEvent;
 
+    private bool isWaitingForDecision;
     private Coroutine decisionCoroutine; 
 
     public enum EventType
     {
         Email,
-        PhoneCall,
+        Phone,
         Printer
     }
 
@@ -34,18 +35,17 @@ public class EventManager : MonoBehaviour
 
     private void Start()
     {
-        StartEvent();
+        StartRandomEvent();
     }
-
-    public void StartEvent()
+    
+    public void StartRandomEvent()
     {
         currentEvent = GetRandomEvent();
 
-        if (currentEvent != null)
-        {
-            currentEvent.StartEvent();
-            isWaitingForDecision = true;
-        }
+        if (currentEvent == null) return;
+        currentEvent.GenerateEvent();
+        
+        isWaitingForDecision = true;
     }
 
     private IGameEvent GetRandomEvent()
@@ -53,33 +53,46 @@ public class EventManager : MonoBehaviour
         List<EventType> possibleEvents = new List<EventType>
         {
             EventType.Email,
-            EventType.PhoneCall,
+            EventType.Phone,
             EventType.Printer
         };
-
-        // Чтобы не повторялось подряд
+        
         if (lastEventType.HasValue)
             possibleEvents.Remove(lastEventType.Value);
 
-        EventType selected = possibleEvents[Random.Range(0, possibleEvents.Count)];
-        lastEventType = selected;
+        EventType type = possibleEvents[Random.Range(0, possibleEvents.Count)];
+        lastEventType = type;
 
-        switch (selected)
+        switch (type)
         {
-            case EventType.Email:
-                return emailManager;
-
-            case EventType.PhoneCall:
-                return phoneManager;
-
-            case EventType.Printer:
-                return printerManager;
+            case EventType.Email: return emailManager;
+            case EventType.Phone: return phoneManager;
+            case EventType.Printer: return printerManager;
         }
 
         return null;
     }
     
-    // Общие кнопки для всех эвентов
+    public void StartEvent(EventData data)
+    {
+        currentEvent = GetEvent(data.deviceType);
+        currentEvent.UpdateEvent(data);
+
+        isWaitingForDecision = true;
+    }
+    
+    private IGameEvent GetEvent(EventType type)
+    {
+        switch (type)
+        {
+            case EventType.Email: return emailManager;
+            case EventType.Phone: return phoneManager;
+            case EventType.Printer: return printerManager;
+        }
+
+        return null;
+    }
+    
     public void PlayerPressedKey1()
     {
         HandleDecision(false);
@@ -94,23 +107,20 @@ public class EventManager : MonoBehaviour
     {
         if (!isWaitingForDecision) return;
 
-        bool correct = currentEvent.IsScam == playerThinksScam;
+        currentData = currentEvent.GetCurrentEvent();
+        
+        bool correct = currentData.IsScam == playerThinksScam;
         Debug.Log($"{currentEvent.GetType().Name}: {(correct ? "Correct!" : "Wrong!")}");
+        currentEvent.EndEvent();
         
-        currentEvent.PlayerChoice(playerThinksScam);
+        EventData next = playerThinksScam ? currentData.nextEventsIfScammer : currentData.nextEventsIfNormal;
         
-        if (!currentEvent.IsChainActive)
+        if (next != null)
         {
-            if (decisionCoroutine != null) StopCoroutine(decisionCoroutine);
-
-            float delay = Random.Range(1f, 2f);
-            decisionCoroutine = StartCoroutine(DecisionCoroutine(delay));
+            StartEvent(next);
+            return;
         }
-    }
-
-    private IEnumerator DecisionCoroutine(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        StartEvent();
+        
+        StartRandomEvent();
     }
 }

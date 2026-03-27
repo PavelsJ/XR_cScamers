@@ -12,6 +12,10 @@ public class PhoneBase : MonoBehaviour
     [Header("Email Description")]
     [SerializeField] private TMP_Text popupText;
     
+    [Header("Message Description")]
+    [SerializeField] private GameObject messagePanel;
+    [SerializeField] private TextMeshProUGUI messageText;
+    
     [Header("Screen Action")]
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material screenMaterial;
@@ -26,7 +30,7 @@ public class PhoneBase : MonoBehaviour
         meshRenderer.material = currentScreenMaterial;
     }
     
-    public void SpawnPhoneCall(PhoneEventData data)
+    public void SpawnPhoneCall(EventData data)
     {
         popupText.text = data.popup;
         
@@ -35,14 +39,33 @@ public class PhoneBase : MonoBehaviour
 
         phoneRoutine = StartCoroutine(PhoneCallRoutine());
     }
-    
-    public void UpdatePhoneCall(PhoneEventData data)
+
+    public void SpawnPhoneMessage(EventData data)
     {
+        messagePanel.SetActive(true);
+        messageText.text = data.description;
+    }
+    
+    public void UpdatePhoneCall(EventData data)
+    {
+        ClearPhone();
+        
         popupText.text = data.popup;
         
         if (phoneRoutine != null)
             StopCoroutine(phoneRoutine);
+        
+        phoneRoutine = StartCoroutine(PhoneCallRoutine());
     }
+    
+    public void UpdatePhoneMessage(EventData data)
+    {
+        ClearPhone();
+            
+        messagePanel.SetActive(true);
+        messageText.text = data.description;
+    }
+
     
     public void ClearPhone()
     {
@@ -52,6 +75,7 @@ public class PhoneBase : MonoBehaviour
             StopCoroutine(phoneRoutine);
         
         popupText.text = "";
+        messagePanel.SetActive(false);
     }
     
     private IEnumerator PhoneCallRoutine()
