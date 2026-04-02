@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PhoneBase : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public class PhoneBase : MonoBehaviour
     private bool isCalling;
     private Rigidbody rigidbody;
     private Coroutine phoneRoutine;
-    
+
     [Header("Email Description")]
+    [SerializeField] private Image popupImage;
     [SerializeField] private TMP_Text popupText;
     
     [Header("Message Description")]
@@ -28,12 +30,16 @@ public class PhoneBase : MonoBehaviour
         if (screenMaterial == null) return;
         currentScreenMaterial = new Material(screenMaterial);
         meshRenderer.material = currentScreenMaterial;
+        screenMaterial.color = Color.black;
     }
     
     public void SpawnPhoneCall(EventData data)
     {
         popupText.text = data.popup;
-        
+        popupImage.enabled = true;
+
+        screenMaterial.color = Color.white;
+
         if (phoneRoutine != null)
             StopCoroutine(phoneRoutine);
 
@@ -44,6 +50,8 @@ public class PhoneBase : MonoBehaviour
     {
         messagePanel.SetActive(true);
         messageText.text = data.description;
+
+        screenMaterial.color = Color.white;
     }
     
     public void UpdatePhoneCall(EventData data)
@@ -51,7 +59,10 @@ public class PhoneBase : MonoBehaviour
         ClearPhone();
         
         popupText.text = data.popup;
-        
+        popupImage.enabled = true;
+
+        screenMaterial.color = Color.white;
+
         if (phoneRoutine != null)
             StopCoroutine(phoneRoutine);
         
@@ -64,6 +75,8 @@ public class PhoneBase : MonoBehaviour
             
         messagePanel.SetActive(true);
         messageText.text = data.description;
+
+        screenMaterial.color = Color.white;
     }
 
     
@@ -73,8 +86,11 @@ public class PhoneBase : MonoBehaviour
 
         if (phoneRoutine != null)
             StopCoroutine(phoneRoutine);
-        
+
+        screenMaterial.color = Color.black;
+
         popupText.text = "";
+        popupImage.enabled = false;
         messagePanel.SetActive(false);
     }
     
