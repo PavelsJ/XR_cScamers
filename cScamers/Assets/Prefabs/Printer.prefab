@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 1968152247515705691}
   - component: {fileID: 5387149499610200560}
   - component: {fileID: 5140012578497906441}
+  - component: {fileID: 940181086700539647}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -202,6 +203,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &940181086700539647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910243586965338215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19bb22fcff85594cad5ed660584f121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyBase
+  keyAction:
+    m_PersistentCalls:
+      m_Calls: []
+  pressDepth: 0.02
+  direction: {x: 0, y: -1, z: 0}
+  pressSpeed: 8
 --- !u!1 &4771911086033627312
 GameObject:
   m_ObjectHideFlags: 0

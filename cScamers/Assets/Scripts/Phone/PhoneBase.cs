@@ -7,7 +7,6 @@ public class PhoneBase : MonoBehaviour
 {
     [Header("Phone Action")]
     private bool isCalling;
-    private Rigidbody rigidbody;
     private Coroutine phoneRoutine;
 
     [Header("Email Description")]
@@ -21,6 +20,7 @@ public class PhoneBase : MonoBehaviour
     [Header("Screen Action")]
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material screenMaterial;
+    [SerializeField] private Rigidbody rigidbody;
     private Material currentScreenMaterial;
     
     private void Awake()

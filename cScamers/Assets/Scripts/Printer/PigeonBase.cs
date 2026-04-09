@@ -41,6 +41,7 @@ public class PigeonBase : MonoBehaviour
             StopCoroutine(activeCoroutine);
 
         targetItem = item;
+
         currentState = State.FlyToItem;
         activeCoroutine = StartCoroutine(MoveTowardsItem());
     }
@@ -54,6 +55,9 @@ public class PigeonBase : MonoBehaviour
     private IEnumerator GrabItem()
     {
         currentState = State.GrabItem;
+
+        Rigidbody currentRb = targetItem.GetComponent<Rigidbody>();
+        if (currentRb != null) currentRb.isKinematic = true;
 
         targetItem.SetParent(grabPoint);
         targetItem.localPosition = Vector3.zero;
@@ -118,6 +122,9 @@ public class PigeonBase : MonoBehaviour
     {
         if (targetItem != null)
             targetItem.SetParent(null);
+
+        Rigidbody currentRb = targetItem.GetComponent<Rigidbody>();
+        if (currentRb != null) currentRb.isKinematic = false;
 
         ResetState();
     }

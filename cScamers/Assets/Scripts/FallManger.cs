@@ -46,9 +46,6 @@ public class FallManger : MonoBehaviour
         currentTarget = item;
 
         isProcessing = true;
-        
-        Rigidbody currentRb = currentTarget.GetComponent<Rigidbody>();
-        if (currentRb != null) currentRb.isKinematic = true;
 
         pigeon.TakeItem(item.transform);
     }
