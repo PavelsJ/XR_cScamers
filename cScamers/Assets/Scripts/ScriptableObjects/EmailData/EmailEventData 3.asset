@@ -13,7 +13,18 @@ MonoBehaviour:
   m_Name: EmailEventData 3
   m_EditorClassIdentifier: Assembly-CSharp::EmailEventData
   isScam: 0
+  deviceType: 0
   popup: "You have an \nincoming email"
-  description: Hello i am not scamer
-  nextEventsIfScammer: {fileID: 0}
+  description: 'Good afternoon, Andrejs!!
+
+    
+
+    VID would like to draw your
+    attention to the fact that your last 8 months of employment were not taken into
+    account in the most recent tax assessment. Please provide your bank account number
+    in the document you have received so that we can transfer your refund as soon
+    as possible. '
+  nextEventsIfScammer: {fileID: 11400000, guid: f0134809595482d44ab8f7dfa474f1c2, type: 2}
   nextEventsIfNormal: {fileID: 0}
+  adress: VID notification.
+  prophile: {fileID: 0}

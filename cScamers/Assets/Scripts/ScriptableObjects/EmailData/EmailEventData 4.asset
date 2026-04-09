@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: EmailEventData 4
   m_EditorClassIdentifier: Assembly-CSharp::EmailEventData
   isScam: 1
+  deviceType: 0
   popup: "You have an \nincoming email"
-  description: points gun at you
-  nextEventsIfScammer: {fileID: 0}
+  description: "Hello! \r\n\r\nIt's Anna from CyberSesurity. I want to inform you
+    that we updated our privacy policy and will ask you to sign new contract to continue
+    providing our service to you.\r\n\r\nThank you for your understanding!"
+  nextEventsIfScammer: {fileID: 11400000, guid: 67da0333b20b33e469ec74141f83f406, type: 2}
   nextEventsIfNormal: {fileID: 0}
+  adress: 
+  prophile: {fileID: 0}
