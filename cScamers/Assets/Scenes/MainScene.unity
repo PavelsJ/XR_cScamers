@@ -12197,14 +12197,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1600149953904240788, guid: a98495e3286056345a8e738cc8510475, type: 3}
-      propertyPath: _rigidbody
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2805617394260392890, guid: a98495e3286056345a8e738cc8510475, type: 3}
-      propertyPath: _rigidbody
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4790161595438755282, guid: a98495e3286056345a8e738cc8510475, type: 3}
       propertyPath: m_Name
       value: Phone
@@ -12257,30 +12249,6 @@ PrefabInstance:
       propertyPath: popupImage
       value: 
       objectReference: {fileID: 6371247798498236109}
-    - target: {fileID: 8379621759543247232, guid: a98495e3286056345a8e738cc8510475, type: 3}
-      propertyPath: _rigidbody
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8946132501057175905, guid: a98495e3286056345a8e738cc8510475, type: 3}
-      propertyPath: m_Anchor.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8946132501057175905, guid: a98495e3286056345a8e738cc8510475, type: 3}
-      propertyPath: m_UseLimits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8946132501057175905, guid: a98495e3286056345a8e738cc8510475, type: 3}
-      propertyPath: m_Limits.max
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8946132501057175905, guid: a98495e3286056345a8e738cc8510475, type: 3}
-      propertyPath: m_Limits.min
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8946132501057175905, guid: a98495e3286056345a8e738cc8510475, type: 3}
-      propertyPath: m_AutoConfigureConnectedAnchor
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13061,6 +13029,10 @@ PrefabInstance:
     - target: {fileID: 7816371511815262900, guid: 6bd32ec3537b0a9408b3162664d593ad, type: 3}
       propertyPath: m_Name
       value: Marker
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816371511815262900, guid: 6bd32ec3537b0a9408b3162664d593ad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
