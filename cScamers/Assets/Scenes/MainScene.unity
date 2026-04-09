@@ -12346,6 +12346,18 @@ PrefabInstance:
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 93824131}
+    - target: {fileID: 8807731977146671287, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: emailEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807731977146671287, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'emailEvents.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d954dafbec3571d4fa20d124f611aa1a, type: 2}
+    - target: {fileID: 8807731977146671287, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'emailEvents.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4a75d6410daa7ed47adb9d022e2e6740, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
