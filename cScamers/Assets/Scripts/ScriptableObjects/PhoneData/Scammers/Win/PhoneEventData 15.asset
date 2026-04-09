@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c4fec817f91eef4aba1919f9baa94c1, type: 3}
-  m_Name: PhoneEventData 4
+  m_Name: PhoneEventData 15
   m_EditorClassIdentifier: Assembly-CSharp::PhoneEventData
   isScam: 1
   deviceType: 1
-  popup: Calling
-  description: Give me my money
-  nextEventsIfScammer: {fileID: 0}
+  popup: SMS
+  description: 'But why not? Maybe you have any doubts that we can discuss? If you
+    have any questions we will be happy to help you and answer them. What do you
+    say? '
+  nextEventsIfScammer: {fileID: 11400000, guid: 04e1a311dac259d409b01b0c50d50052, type: 2}
   nextEventsIfNormal: {fileID: 0}
   isMessage: 1

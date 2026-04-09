@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4fec817f91eef4aba1919f9baa94c1, type: 3}
+  m_Name: PhoneEventData 13
+  m_EditorClassIdentifier: Assembly-CSharp::PhoneEventData
+  isScam: 1
+  deviceType: 1
+  popup: SMS
+  description: 'Easy. All you need to do is to sign this paper. No need to read anything,
+    contract is already made and checked by our amazing workers just sign it and
+    send it using your golub. Easy, Fast and Amazing. '
+  nextEventsIfScammer: {fileID: 11400000, guid: dc8df808a502a1545b243330d40a9228, type: 2}
+  nextEventsIfNormal: {fileID: 11400000, guid: 67da0333b20b33e469ec74141f83f406, type: 2}
+  isMessage: 1
