@@ -15,6 +15,23 @@ MonoBehaviour:
   isScam: 1
   deviceType: 0
   popup: "You have an \nincoming email"
-  description: Give me my money
-  nextEventsIfScammer: {fileID: 11400000, guid: fc2e2c4e2684cfa4fb463ac4dea6fa4b, type: 2}
+  description: 'Dear, Andrejs!!
+
+    
+
+    CSDD want to inform you that you need
+    to pay a speeding fine. For convenience you can do it just by clicking following
+    link below:
+
+    
+
+    www.givemeyourmoney.lv
+
+    
+
+    Thank you for your
+    payment.'
+  nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
+  adress: Speeding fine!!!!!!
+  prophile: {fileID: 0}

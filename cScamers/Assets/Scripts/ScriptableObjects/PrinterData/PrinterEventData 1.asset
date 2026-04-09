@@ -15,6 +15,9 @@ MonoBehaviour:
   isScam: 1
   deviceType: 2
   popup: Printing...
-  description: Give me my money
-  nextEventsIfScammer: {fileID: 11400000, guid: 2ad9beecd0582d64cbc2cab22a0d2af7, type: 2}
+  description: 'Please write your bank account number!
+
+
+    Thank you!'
+  nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
