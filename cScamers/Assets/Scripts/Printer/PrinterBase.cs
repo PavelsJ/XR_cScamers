@@ -7,7 +7,9 @@ public class PrinterBase : MonoBehaviour
     [SerializeField] PrinterLight printLight;
     [SerializeField] GameObject printPrefab;
     [SerializeField] Transform spawnPoint;
-    private LetterBase currentPaper;
+
+    private bool isPrinting = false;
+    private EventData currentData;
 
     [Header("Pigeon Action")]
     [SerializeField] private PigeonBase pigeonEvent;
@@ -30,21 +32,32 @@ public class PrinterBase : MonoBehaviour
 
     public void SpawnPaper(EventData data)
     {
-        popupText.text = data.popup;
+        isPrinting = true;
+        currentData = data;
         printLight.SetLight(true);
-        
+    }
+
+    public void StartLetter()
+    {
+        if (!isPrinting) return;
+
+        if (currentData == null) return;
+        popupText.text = currentData.popup;
+
         GameObject paper = Instantiate(printPrefab, spawnPoint.position, spawnPoint.rotation);
         var paperBase = paper.GetComponent<LetterBase>();
         if (paperBase == null) return;
-        
-        paperBase.UpdateInfo(data.description);
+
+        paperBase.UpdateInfo(currentData);
         ThrowLetter(paper, 2);
+        isPrinting = false;
     }
     
     public void ClearPrinter()
     {
         printLight.SetLight(false);
         popupText.text = "";
+        isPrinting = false;
     }
 
     private void ThrowLetter(GameObject paper, float force = 5f)
