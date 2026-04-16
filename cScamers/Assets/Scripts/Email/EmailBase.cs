@@ -64,6 +64,12 @@ public class EmailBase : MonoBehaviour
 
     public void UpdateEmail(EventData data)
     {
+        if (data is EmailEventData email)
+        {
+            ClearEmail();
+            subjectText.text = email.adress;
+        }
+
         descriptionText.text = data.description;
     }
 
