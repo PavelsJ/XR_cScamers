@@ -12609,6 +12609,30 @@ PrefabInstance:
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 93824131}
+    - target: {fileID: 2942158431758091059, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: printerEvents.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942158431758091059, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'printerEvents.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ad9beecd0582d64cbc2cab22a0d2af7, type: 2}
+    - target: {fileID: 2942158431758091059, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'printerEvents.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b2cf108b4254674e9fca2c5c2add17d, type: 2}
+    - target: {fileID: 2942158431758091059, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'printerEvents.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 61f6414c81e81054fb0be01dfd2488a3, type: 2}
+    - target: {fileID: 2942158431758091059, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'printerEvents.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1be9319c83a7b4e4dba2d69154ea739e, type: 2}
+    - target: {fileID: 2942158431758091059, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'printerEvents.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1be9319c83a7b4e4dba2d69154ea739e, type: 2}
     - target: {fileID: 4381476545750730766, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
       propertyPath: m_Name
       value: EventManager
@@ -12629,6 +12653,86 @@ PrefabInstance:
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 93824131}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: phoneEvents.Array.size
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a5fdc00376534c84081f00a5396dc20d, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e291d5bd9f2899343849c6114320cb5f, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 54fa1eb3078a46743bc6fad3d9dda187, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b290ab9aa695cac4eb0b46074e14f46e, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e94317055f32d04c9c23ea0877c1a69, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 95fe9edb8087aa54eaf10c2b39ba92c7, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f6a68d172faccc4c9e436b22d027cf2, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[9]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a94921ff0fd485b4c925839388cbe6e3, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[10]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 20587203cb495ab479877ae36d4a6ea8, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[11]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 90aa260e3840f0e4091735af2a497f4e, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[12]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b601e9e559d64a040bab062ff1404d6e, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[13]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dc8df808a502a1545b243330d40a9228, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[14]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5ac5e493fd9efb546a6be76750679666, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[15]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 04e1a311dac259d409b01b0c50d50052, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[16]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 325faba0985014c459bfcb4665d9576a, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[17]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c10cb41f2f535345afc7833b382ef6c, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[18]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 442d566e76f3d4e4f98a8d115467f70a, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[19]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b2734141f76bbfa4997c31ce6fd8beac, type: 2}
+    - target: {fileID: 4953071958267550928, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'phoneEvents.Array.data[20]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 77c2fb727124cf54c859898b4c916241, type: 2}
     - target: {fileID: 6238763380899886703, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12683,7 +12787,7 @@ PrefabInstance:
       objectReference: {fileID: 93824131}
     - target: {fileID: 8807731977146671287, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
       propertyPath: emailEvents.Array.size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8807731977146671287, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
       propertyPath: 'emailEvents.Array.data[3]'
@@ -12693,6 +12797,18 @@ PrefabInstance:
       propertyPath: 'emailEvents.Array.data[4]'
       value: 
       objectReference: {fileID: 11400000, guid: 4a75d6410daa7ed47adb9d022e2e6740, type: 2}
+    - target: {fileID: 8807731977146671287, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'emailEvents.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 09aa2eda19d96d34abef0e029f96bb0a, type: 2}
+    - target: {fileID: 8807731977146671287, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'emailEvents.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ff135aec97eb7e47a3c71d797d19b28, type: 2}
+    - target: {fileID: 8807731977146671287, guid: effbf541cf52fb94290fd7adab9fe5f5, type: 3}
+      propertyPath: 'emailEvents.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a0e8102c06c10b84b82abd7d928854b5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

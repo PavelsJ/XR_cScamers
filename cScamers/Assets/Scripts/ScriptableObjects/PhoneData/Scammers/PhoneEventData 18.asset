@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4fec817f91eef4aba1919f9baa94c1, type: 3}
+  m_Name: PhoneEventData 18
+  m_EditorClassIdentifier: Assembly-CSharp::PhoneEventData
+  isScam: 1
+  deviceType: 1
+  popup: SMS
+  description: "Hi! It\u2019s Andrejs? It's Janis from your local courier service.
+    You received a big package on your name. Unfortunately person who send it filled
+    form had some doubts about your adress and such things, only your name and phone
+    number was solid. Would you be so kind to sign a paper confirming that the rest
+    of the form with your private information is filled correctly or just correct
+    it so we could deliver it to you? "
+  nextEventsIfScammer: {fileID: 11400000, guid: 67da0333b20b33e469ec74141f83f406, type: 2}
+  nextEventsIfNormal: {fileID: 0}
+  isMessage: 1
