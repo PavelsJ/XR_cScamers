@@ -39,11 +39,18 @@ public class KeyBase : MonoBehaviour
     {
         if (isPressed)
         {
-            isPressed = false;
+            StartCoroutine(Delay(1));
             
             if (keyRoutine != null) StopCoroutine(keyRoutine);
             keyRoutine = StartCoroutine(SetKey(startPos));
         }
+    }
+
+    private IEnumerator Delay(float delay)
+    {
+        yield return delay;
+
+        isPressed = false;
     }
     
     private IEnumerator SetKey(Vector3 target)

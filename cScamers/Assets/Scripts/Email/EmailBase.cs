@@ -15,6 +15,7 @@ public class EmailBase : MonoBehaviour
     
     [Header("Email Description")]
     [SerializeField] private TMP_Text popupText;
+    [SerializeField] private TMP_Text subjectText;
     [SerializeField] private TMP_Text descriptionText;
 
     [Header("Screen Action")] 

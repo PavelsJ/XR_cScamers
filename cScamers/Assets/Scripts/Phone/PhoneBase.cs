@@ -25,7 +25,6 @@ public class PhoneBase : MonoBehaviour
     
     private void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
         
         if (screenMaterial == null) return;
         currentScreenMaterial = new Material(screenMaterial);
