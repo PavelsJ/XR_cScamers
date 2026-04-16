@@ -52,9 +52,6 @@ public class FallManger : MonoBehaviour
 
     public void OnPigeonFinished()
     {
-        Rigidbody currentRb = currentTarget.GetComponent<Rigidbody>();
-        if (currentRb != null) currentRb.isKinematic = false;
-        
         currentTarget.Reset();
         
         isProcessing = false;

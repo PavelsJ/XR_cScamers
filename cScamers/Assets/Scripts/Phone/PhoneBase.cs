@@ -20,7 +20,8 @@ public class PhoneBase : MonoBehaviour
     [Header("Screen Action")]
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material screenMaterial;
-    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] private Rigidbody[] rbs;
+
     private Material currentScreenMaterial;
     
     private void Awake()
@@ -104,7 +105,10 @@ public class PhoneBase : MonoBehaviour
                 Random.Range(-1f, 1f)
             );
 
-            rigidbody.AddForce(force, ForceMode.Impulse);
+            foreach (var rb in rbs)
+            {
+                rb.AddForce(force, ForceMode.Impulse);
+            }
 
             yield return new WaitForSeconds(0.15f);
         }

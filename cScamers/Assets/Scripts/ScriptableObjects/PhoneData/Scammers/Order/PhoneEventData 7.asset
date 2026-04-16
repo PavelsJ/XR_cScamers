@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4fec817f91eef4aba1919f9baa94c1, type: 3}
+  m_Name: PhoneEventData 7
+  m_EditorClassIdentifier: Assembly-CSharp::PhoneEventData
+  isScam: 1
+  deviceType: 1
+  popup: Code
+  description: "Hello! Am I talking to Andrejs? Good, I'm Ilze from YourFavouriteShop.
+    I can see that there was put an order on your name but it wasn't finished, we
+    haven't got the payment\u2026.ohh you haven't make any orders recently\u2026"
+  nextEventsIfScammer: {fileID: 11400000, guid: 95fe9edb8087aa54eaf10c2b39ba92c7, type: 2}
+  nextEventsIfNormal: {fileID: 0}
+  isMessage: 1

@@ -12,8 +12,9 @@ public class EmailBase : MonoBehaviour
     [SerializeField] private float existenceTime = 1f;
     
     private Coroutine popupAnimationCoroutine;
-    
+
     [Header("Email Description")]
+    [SerializeField] private GameObject emailPanel;
     [SerializeField] private TMP_Text popupText;
     [SerializeField] private TMP_Text subjectText;
     [SerializeField] private TMP_Text descriptionText;
@@ -79,6 +80,7 @@ public class EmailBase : MonoBehaviour
     {
         if (currentScreenMaterial == null) return;
         isOn = !isOn;
+        emailPanel.SetActive(isOn);
         currentScreenMaterial.color = isOn ? Color.white : Color.black;
     }
 }

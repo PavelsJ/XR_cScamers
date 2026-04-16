@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c4fec817f91eef4aba1919f9baa94c1, type: 3}
-  m_Name: PhoneEventData 3
+  m_Name: PhoneEventData 5
   m_EditorClassIdentifier: Assembly-CSharp::PhoneEventData
-  isScam: 0
+  isScam: 1
   deviceType: 1
-  popup: Calling
-  description: Hello i am not scamer
-  nextEventsIfScammer: {fileID: 0}
+  popup: Code
+  description: "Good day! It\u2019s Markus from CyberSecyrity team. We wanted to
+    inform you about suspicious activity going on in your user account. Today at
+    13:24 someone opened your account on unauthorised device. "
+  nextEventsIfScammer: {fileID: 11400000, guid: b290ab9aa695cac4eb0b46074e14f46e, type: 2}
   nextEventsIfNormal: {fileID: 0}
-  isMessage: 0
+  isMessage: 1

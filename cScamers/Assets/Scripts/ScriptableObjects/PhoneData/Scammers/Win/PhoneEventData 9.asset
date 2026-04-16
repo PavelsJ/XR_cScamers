@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c4fec817f91eef4aba1919f9baa94c1, type: 3}
-  m_Name: PhoneEventData 2
+  m_Name: PhoneEventData 9
   m_EditorClassIdentifier: Assembly-CSharp::PhoneEventData
   isScam: 1
   deviceType: 1
-  popup: Calling
-  description: Give me my money
-  nextEventsIfScammer: {fileID: 11400000, guid: e291d5bd9f2899343849c6114320cb5f, type: 2}
+  popup: SMS
+  description: "Hi! It\u2019s Anna from company SuperCrazyAmazingMoments. I\u2019m
+    happy to inform you that you won tickets to Super Crazy Amazing trip to the land
+    of your dream. Completely free, all inclusive once in your life opportunity.
+    Congratulations! "
+  nextEventsIfScammer: {fileID: 11400000, guid: a94921ff0fd485b4c925839388cbe6e3, type: 2}
   nextEventsIfNormal: {fileID: 0}
-  isMessage: 0
+  isMessage: 1

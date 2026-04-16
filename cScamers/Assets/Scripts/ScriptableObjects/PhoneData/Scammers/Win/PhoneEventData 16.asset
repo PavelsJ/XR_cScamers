@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c4fec817f91eef4aba1919f9baa94c1, type: 3}
+  m_Name: PhoneEventData 16
+  m_EditorClassIdentifier: Assembly-CSharp::PhoneEventData
+  isScam: 1
+  deviceType: 1
+  popup: SMS
+  description: "Maybe you want to reconsider? I\u2019m sure anyone else in your place
+    would be happy to accept such prize. Just accept it, it\u2019ll be fine. "
+  nextEventsIfScammer: {fileID: 11400000, guid: 325faba0985014c459bfcb4665d9576a, type: 2}
+  nextEventsIfNormal: {fileID: 0}
+  isMessage: 1

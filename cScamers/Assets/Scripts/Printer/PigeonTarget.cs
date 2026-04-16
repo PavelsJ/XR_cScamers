@@ -1,10 +1,14 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class PigeonTarget : MonoBehaviour
 {
     [SerializeField] private float minY = -0.5f;
+    [SerializeField] private Rigidbody[] rbs;
+
     private bool isRegistered = false;
     private FallManger fallManager;
+
 
     private void Start()
     {
@@ -25,5 +29,10 @@ public class PigeonTarget : MonoBehaviour
     public void Reset()
     {
         isRegistered = false;
+    }
+
+    public Rigidbody[] GetRbs()
+    {
+        return rbs;
     }
 }

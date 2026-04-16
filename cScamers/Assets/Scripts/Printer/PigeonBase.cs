@@ -56,8 +56,15 @@ public class PigeonBase : MonoBehaviour
     {
         currentState = State.GrabItem;
 
-        Rigidbody currentRb = targetItem.GetComponent<Rigidbody>();
-        if (currentRb != null) currentRb.isKinematic = true;
+        PigeonTarget target = targetItem.GetComponent<PigeonTarget>();
+        if (target != null)
+        {
+            foreach (var rb in target.GetRbs())
+            {
+                if (rb == null) continue;
+                rb.isKinematic = true;
+            }
+        }
 
         targetItem.SetParent(grabPoint);
         targetItem.localPosition = Vector3.zero;
@@ -123,8 +130,15 @@ public class PigeonBase : MonoBehaviour
         if (targetItem != null)
             targetItem.SetParent(null);
 
-        Rigidbody currentRb = targetItem.GetComponent<Rigidbody>();
-        if (currentRb != null) currentRb.isKinematic = false;
+        PigeonTarget target = targetItem.GetComponent<PigeonTarget>();
+        if (target != null)
+        {
+            foreach (var rb in target.GetRbs())
+            {
+                if (rb == null) continue;
+                rb.isKinematic = false;
+            }
+        }
 
         ResetState();
     }

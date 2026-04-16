@@ -5,5 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PrinterEventData", menuName = "Scriptable Objects/PrinterEventData")]
 public class PrinterEventData : EventData
 {
-    
+    [Header("Letter title")]
+    [TextArea(1, 2)] public string letterTitle;
+
+    [Header("Letter spam")]
+    public bool isSpam;
+    public Sprite ads;
 }
