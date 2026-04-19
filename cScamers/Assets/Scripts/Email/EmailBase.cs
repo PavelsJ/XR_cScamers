@@ -70,13 +70,10 @@ public class EmailBase : MonoBehaviour
 
     public void UpdateEmail(EventData data)
     {
-        if (data is EmailEventData email)
-        {
-            ClearEmail();
-            
-            subjectText.text = email.subject;
-            descriptionText.text = email.description;
-        }
+        ClearEmail();
+        
+        subjectText.text = data.subject;
+        descriptionText.text = data.description;
         
         GameObject newEmail = Instantiate(emailBox, emailBoxTransform);
         MessageBox messageBox = newEmail.GetComponent<MessageBox>();

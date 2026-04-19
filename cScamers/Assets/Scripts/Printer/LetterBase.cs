@@ -10,17 +10,15 @@ public class LetterBase : MonoBehaviour
     [SerializeField] private Image backgroundImage;
     public void UpdateInfo(EventData data)
     {
-        if (data is PrinterEventData print)
-        {
-            titleText.text = print.subject;
-            descriptionText.text = data.description;
-            
-            ClearLetter();
-        }
+        ClearLetter();
+        
+        titleText.text = data.subject;
+        descriptionText.text = data.description;
     }
 
     private void ClearLetter()
     {
+        titleText.text = "";
         descriptionText.text = "";
     }
 }

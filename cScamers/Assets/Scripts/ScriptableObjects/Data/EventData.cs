@@ -12,9 +12,13 @@ public class EventData : ScriptableObject, IEventData
     [TextArea(2,5)] public string popup;
     
     [Header("Email Description")]
+    [TextArea(2, 4)] public string subject;
     [TextArea(4, 10)] public string description;
     
     [Header("Next Events")]
     public EventData nextEventsIfScammer;
     public EventData nextEventsIfNormal;
+    
+    [Header("Spam")] 
+    public bool isSpam = false;
 }

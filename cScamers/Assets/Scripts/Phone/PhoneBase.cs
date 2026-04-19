@@ -35,6 +35,8 @@ public class PhoneBase : MonoBehaviour
     
     public void SpawnPhoneCall(EventData data)
     {
+        ClearPhone();
+        
         popupText.text = data.popup;
         popupImage.enabled = true;
         animator.SetTrigger("Call");
@@ -49,6 +51,8 @@ public class PhoneBase : MonoBehaviour
 
     public void SpawnPhoneMessage(EventData data)
     {
+        ClearPhone();
+        
         popupText.text = data.popup;
         popupImage.enabled = true;
         animator.SetTrigger("Message");
