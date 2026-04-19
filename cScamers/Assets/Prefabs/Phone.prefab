@@ -120,7 +120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7498268292868935045
 RectTransform:
   m_ObjectHideFlags: 0
@@ -443,6 +443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   popupImage: {fileID: 8227159292996025644}
   popupText: {fileID: 1495571863189447694}
+  animator: {fileID: 0}
   messagePanel: {fileID: 4919912760353021781}
   messageText: {fileID: 5106329330913262702}
   meshRenderer: {fileID: 912569185473639047}
@@ -779,7 +780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6697713030299973036
 RectTransform:
   m_ObjectHideFlags: 0
@@ -998,7 +999,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6ebee210131550a4f9653fb206d4f504, type: 2}
+  - {fileID: 2100000, guid: e742d72fd8ac0b04a86685f6df025939, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
