@@ -7,8 +7,4 @@ public class PrinterEventData : EventData
 {
     [Header("Letter title")]
     [TextArea(1, 2)] public string subject;
-
-    [Header("Letter spam")]
-    public bool isSpam;
-    public Sprite spamSprite;
 }

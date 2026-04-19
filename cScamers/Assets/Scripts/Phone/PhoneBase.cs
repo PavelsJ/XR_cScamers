@@ -27,7 +27,6 @@ public class PhoneBase : MonoBehaviour
     
     private void Awake()
     {
-        
         if (screenMaterial == null) return;
         currentScreenMaterial = new Material(screenMaterial);
         meshRenderer.material = currentScreenMaterial;
@@ -40,7 +39,7 @@ public class PhoneBase : MonoBehaviour
         popupImage.enabled = true;
         animator.SetTrigger("Call");
 
-        screenMaterial.color = Color.white;
+        currentScreenMaterial.color = Color.white;
 
         if (phoneRoutine != null)
             StopCoroutine(phoneRoutine);
@@ -57,7 +56,7 @@ public class PhoneBase : MonoBehaviour
         messagePanel.SetActive(true);
         messageText.text = data.description;
         
-        screenMaterial.color = Color.white;
+        currentScreenMaterial.color = Color.white;
     }
     
     public void UpdatePhoneCall(EventData data)
@@ -67,7 +66,7 @@ public class PhoneBase : MonoBehaviour
         popupText.text = data.popup;
         popupImage.enabled = true;
 
-        screenMaterial.color = Color.white;
+        currentScreenMaterial.color = Color.white;
 
         if (phoneRoutine != null)
             StopCoroutine(phoneRoutine);
@@ -93,7 +92,7 @@ public class PhoneBase : MonoBehaviour
         if (phoneRoutine != null)
             StopCoroutine(phoneRoutine);
 
-        screenMaterial.color = Color.black;
+        currentScreenMaterial.color = Color.black;
 
         popupText.text = "";
         popupImage.enabled = false;

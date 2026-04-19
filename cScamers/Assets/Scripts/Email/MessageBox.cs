@@ -8,7 +8,11 @@ public class MessageBox : MonoBehaviour
     
     public void UpdateText(string message)
     {
-        message = message.Replace("\n", " ");
+        message = message
+            .Replace("\n", " ")
+            .Replace("\r", " ")
+            .Replace("\t", " ")
+            .Trim();
 
         if (message.Length > maxLength)
         {

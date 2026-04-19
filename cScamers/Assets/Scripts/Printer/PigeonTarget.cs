@@ -7,6 +7,8 @@ public class PigeonTarget : MonoBehaviour
     [SerializeField] private Rigidbody[] rbs;
 
     private bool isRegistered = false;
+    private bool canSendFallSignal = true;
+    
     private FallManger fallManager;
 
 
@@ -15,15 +17,27 @@ public class PigeonTarget : MonoBehaviour
         fallManager = FallManger.Instance;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (isRegistered) return;
+        if (!canSendFallSignal) return;
 
         if (transform.position.y < minY)
         {
             isRegistered = true;
             fallManager.RegisterFallenItem(this);
         }
+    }
+    
+    public void DisableFallSignal()
+    {
+        canSendFallSignal = false;
+        fallManager.GiveItem(this);
+    }
+    
+    public void EnableFallSignal()
+    {
+        canSendFallSignal = true;
     }
 
     public void Reset()

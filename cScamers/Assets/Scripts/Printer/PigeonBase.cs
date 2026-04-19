@@ -7,12 +7,15 @@ public class PigeonBase : MonoBehaviour
     [SerializeField] private Transform startPoint;
     [SerializeField] private Transform grabPoint;
     
+    [Header("Spam")]
+    public Sprite[] spamSprites;
+    
     private State currentState;
     private Transform targetItem;
     
     private Coroutine activeCoroutine;
-    
-    private enum State
+
+    public enum State
     {
         Idle,
         FlyToItem,
@@ -124,7 +127,7 @@ public class PigeonBase : MonoBehaviour
         transform.position = end;
     }
     
-     public void DropItem()
+    public void DropItem()
     {
         if (targetItem != null)
             targetItem.SetParent(null);
@@ -147,5 +150,10 @@ public class PigeonBase : MonoBehaviour
         return (1 - t) * (1 - t) * a +
                2 * (1 - t) * t * b +
                t * t * c;
+    }
+
+    public State GetState()
+    {
+        return currentState;
     }
 }

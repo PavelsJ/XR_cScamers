@@ -8,28 +8,19 @@ public class LetterBase : MonoBehaviour
     [SerializeField] private TextMeshProUGUI titleText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private Image backgroundImage;
-    public void UpdateInfo(EventData data, bool isImage = false)
+    public void UpdateInfo(EventData data)
     {
         if (data is PrinterEventData print)
         {
             titleText.text = print.subject;
+            descriptionText.text = data.description;
+            
             ClearLetter();
-
-            if (isImage)
-            {
-                backgroundImage.enabled = true;
-                backgroundImage.sprite = print.spamSprite;
-            }
-            else
-            {
-                descriptionText.text = data.description;
-            }
         }
     }
 
     private void ClearLetter()
     {
-        backgroundImage.enabled = false;
         descriptionText.text = "";
     }
 }

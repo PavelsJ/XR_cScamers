@@ -36,6 +36,13 @@ public class FallManger : MonoBehaviour
             fallQueue.Add(item);
     }
 
+    public void GiveItem(PigeonTarget item)
+    {
+        if(item != currentTarget) return;
+        if(pigeon.GetState() == PigeonBase.State.WaitingForPlayer)
+            pigeon.DropItem();
+    }
+
     private void ProcessNextItem()
     {
         if (fallQueue.Count == 0)
@@ -53,7 +60,6 @@ public class FallManger : MonoBehaviour
     public void OnPigeonFinished()
     {
         currentTarget.Reset();
-        
         isProcessing = false;
     }
 }
