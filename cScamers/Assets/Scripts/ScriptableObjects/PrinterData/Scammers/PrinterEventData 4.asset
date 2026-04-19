@@ -18,6 +18,6 @@ MonoBehaviour:
   description: I sad GIVE NE MY MONEY
   nextEventsIfScammer: {fileID: 11400000, guid: 0b2cf108b4254674e9fca2c5c2add17d, type: 2}
   nextEventsIfNormal: {fileID: 0}
-  letterTitle: 
+  subject: ...
   isSpam: 0
-  ads: {fileID: 0}
+  spamSprite: {fileID: 0}

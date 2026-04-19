@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 35dc01de5aa202a42afaa9845b0d7311, type: 2}
+  - {fileID: 2100000, guid: e742d72fd8ac0b04a86685f6df025939, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -509,7 +509,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4827674391208842300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -517,7 +517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0, y: -0}
   m_SizeDelta: {x: -0.2, y: -0.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8134105004213468787
@@ -798,9 +798,9 @@ MonoBehaviour:
   printPrefab: {fileID: 1231544884820602227, guid: b04fa6f8fdcacf54d8af553506055ddc, type: 3}
   spawnPoint: {fileID: 4645412668784036630}
   pigeonEvent: {fileID: 0}
-  popupText: {fileID: 0}
+  popupText: {fileID: 9080554831073701647}
   meshRenderer: {fileID: 7196118595813887516}
-  screenMaterial: {fileID: 2100000, guid: 35dc01de5aa202a42afaa9845b0d7311, type: 2}
+  screenMaterial: {fileID: 2100000, guid: e742d72fd8ac0b04a86685f6df025939, type: 2}
 --- !u!65 &7721671065673462376
 BoxCollider:
   m_ObjectHideFlags: 0

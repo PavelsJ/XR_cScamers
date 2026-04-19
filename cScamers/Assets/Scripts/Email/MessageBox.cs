@@ -8,6 +8,8 @@ public class MessageBox : MonoBehaviour
     
     public void UpdateText(string message)
     {
+        message = message.Replace("\n", " ");
+
         if (message.Length > maxLength)
         {
             messageText.text = message.Substring(0, maxLength - 3) + "...";

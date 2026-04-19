@@ -18,6 +18,6 @@ MonoBehaviour:
   description: PLSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
   nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
-  letterTitle: 
+  subject: ...
   isSpam: 0
-  ads: {fileID: 0}
+  spamSprite: {fileID: 0}

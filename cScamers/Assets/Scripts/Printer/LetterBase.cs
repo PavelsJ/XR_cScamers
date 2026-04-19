@@ -12,13 +12,13 @@ public class LetterBase : MonoBehaviour
     {
         if (data is PrinterEventData print)
         {
-            titleText.text = print.letterTitle;
+            titleText.text = print.subject;
             ClearLetter();
 
             if (isImage)
             {
                 backgroundImage.enabled = true;
-                backgroundImage.sprite = print.ads;
+                backgroundImage.sprite = print.spamSprite;
             }
             else
             {

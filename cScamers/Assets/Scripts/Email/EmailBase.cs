@@ -33,6 +33,7 @@ public class EmailBase : MonoBehaviour
         if (screenMaterial == null) return;
         currentScreenMaterial = new Material(screenMaterial);
         meshRenderer.material = currentScreenMaterial;
+        currentScreenMaterial.color = Color.white;
     }
 
     public void SpawnEmail(EventData data)
