@@ -18,19 +18,16 @@ MonoBehaviour:
   description: 'Dear, Andrejs!!
 
 
-
     CSDD want to inform you that you need to pay
     a speeding fine. For convenience you can do it just by clicking following link
     below:
 
 
-
     www.givemeyourmoney.lv
-
 
 
     Thank you for your payment.'
   nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
-  adress: Speeding fine!!!!!!
+  subject: ...
   prophile: {fileID: 0}

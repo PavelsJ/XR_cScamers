@@ -11,11 +11,15 @@ public class EmailBase : MonoBehaviour
     [SerializeField] private GameObject popupPanel;
     [SerializeField] private float existenceTime = 1f;
     
+    [SerializeField] private GameObject emailBox;
+    [SerializeField] private RectTransform emailBoxTransform;
+    
     private Coroutine popupAnimationCoroutine;
 
     [Header("Email Description")]
     [SerializeField] private GameObject emailPanel;
     [SerializeField] private TMP_Text popupText;
+    
     [SerializeField] private TMP_Text subjectText;
     [SerializeField] private TMP_Text descriptionText;
 
@@ -59,7 +63,8 @@ public class EmailBase : MonoBehaviour
         
         popupPanel.SetActive(false);
         popupText.text = "";
-        descriptionText.text = data.description;
+
+        UpdateEmail(data);
     }
 
     public void UpdateEmail(EventData data)
@@ -67,10 +72,15 @@ public class EmailBase : MonoBehaviour
         if (data is EmailEventData email)
         {
             ClearEmail();
-            subjectText.text = email.adress;
+            
+            subjectText.text = email.subject;
+            descriptionText.text = email.description;
         }
-
-        descriptionText.text = data.description;
+        
+        GameObject newEmail = Instantiate(emailBox, emailBoxTransform);
+        MessageBox messageBox = newEmail.GetComponent<MessageBox>();
+        if (messageBox ==null) return;
+        messageBox.UpdateText(data.description);
     }
 
     public void ClearEmail()

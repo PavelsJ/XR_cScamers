@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 4593544046364132456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.000911, y: 0.000364, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -241,7 +241,7 @@ Transform:
   m_GameObject: {fileID: 7484552685989196839}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22738917, y: -0.66954786, z: -0.6695477, w: 0.22738916}
-  m_LocalPosition: {x: -0.0020121657, y: 0.003901537, z: 0.0007199988}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.009999997, y: 0.009999997, z: 0.009999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -326,7 +326,7 @@ MonoBehaviour:
   _data: {fileID: 0}
   _pointableElement: {fileID: 5834472720446337195}
   _rigidbody: {fileID: 5936921097521308333}
-  _grabSource: {fileID: 0}
+  _grabSource: {fileID: 7221625715197450451}
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0
   _resetGrabOnGrabsUpdated: 1

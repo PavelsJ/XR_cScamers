@@ -20,5 +20,5 @@ MonoBehaviour:
 '
   nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
-  adress: LInk
+  subject: ...
   prophile: {fileID: 0}

@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PrinterEventData
   isScam: 1
   deviceType: 2
-  popup: Printing...
+  popup: Ready to Print...
   description: 'Please write your bank account number!
 
 
     Thank you!'
   nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
+  letterTitle: 
+  isSpam: 0
+  ads: {fileID: 0}

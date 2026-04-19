@@ -120,7 +120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7498268292868935045
 RectTransform:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482396939149303116}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -405,6 +405,7 @@ GameObject:
   - component: {fileID: 6482480029466456577}
   - component: {fileID: 6683320204398866627}
   - component: {fileID: 125776369021652408}
+  - component: {fileID: 7847537901876228500}
   m_Layer: 6
   m_Name: Phone
   m_TagString: Untagged
@@ -443,7 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   popupImage: {fileID: 8227159292996025644}
   popupText: {fileID: 1495571863189447694}
-  animator: {fileID: 0}
+  animator: {fileID: 7847537901876228500}
   messagePanel: {fileID: 4919912760353021781}
   messageText: {fileID: 5106329330913262702}
   meshRenderer: {fileID: 912569185473639047}
@@ -536,6 +537,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &7847537901876228500
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790161595438755282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b93940c41782ac46b960d9f970e8ee3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4919912760353021781
 GameObject:
   m_ObjectHideFlags: 0

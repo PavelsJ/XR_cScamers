@@ -29,5 +29,5 @@ MonoBehaviour:
     Thank you for your payment.'
   nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
-  adress: Speeding fine!!!!!!
+  subject: ...
   prophile: {fileID: 0}

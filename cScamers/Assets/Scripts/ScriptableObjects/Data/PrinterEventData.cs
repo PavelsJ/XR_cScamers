@@ -6,9 +6,9 @@ using UnityEngine;
 public class PrinterEventData : EventData
 {
     [Header("Letter title")]
-    [TextArea(1, 2)] public string letterTitle;
+    [TextArea(1, 2)] public string subject;
 
     [Header("Letter spam")]
     public bool isSpam;
-    public Sprite ads;
+    public Sprite spamSprite;
 }
