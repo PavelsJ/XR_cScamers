@@ -5,7 +5,6 @@ using UnityEngine;
 public class PigeonBase : MonoBehaviour
 {
     [SerializeField] private Transform startPoint;
-    [SerializeField] private Transform playerPoint;
     [SerializeField] private Transform grabPoint;
     
     private State currentState;
@@ -18,7 +17,6 @@ public class PigeonBase : MonoBehaviour
         Idle,
         FlyToItem,
         GrabItem,
-        FlyToPlayer,
         WaitingForPlayer
     }
 
@@ -71,14 +69,14 @@ public class PigeonBase : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        activeCoroutine = StartCoroutine(FlyToPlayer());
+        activeCoroutine = StartCoroutine(FlyToStart());
     }
     
-    private IEnumerator FlyToPlayer()
+    private IEnumerator FlyToStart()
     {
-        currentState = State.FlyToPlayer;
+        currentState = State.Idle;
 
-        yield return MoveTowardsTarget(playerPoint, 2f);
+        yield return MoveTowardsTarget(startPoint, 2f);
 
         StartWaitingForPlayer();
     }
@@ -86,6 +84,7 @@ public class PigeonBase : MonoBehaviour
     private void StartWaitingForPlayer()
     {
         currentState = State.WaitingForPlayer;
+        transform.eulerAngles = Vector3.zero;
         activeCoroutine = null;
     }
     
@@ -113,7 +112,7 @@ public class PigeonBase : MonoBehaviour
             {
                 transform.rotation = Quaternion.Slerp(
                     transform.rotation,
-                    Quaternion.LookRotation(dir),
+                    Quaternion.LookRotation(dir) * Quaternion.Euler(0, 180f, 0),
                     6f * Time.deltaTime
                 );
             }

@@ -31,7 +31,7 @@ public class PhoneBase : MonoBehaviour
         if (screenMaterial == null) return;
         currentScreenMaterial = new Material(screenMaterial);
         meshRenderer.material = currentScreenMaterial;
-        screenMaterial.color = Color.black;
+        currentScreenMaterial.color = Color.black;
     }
     
     public void SpawnPhoneCall(EventData data)
