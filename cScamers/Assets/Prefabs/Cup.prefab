@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5834472720446337195}
   - component: {fileID: 5936921097521308333}
   - component: {fileID: 7250480962496821845}
+  - component: {fileID: 1610251994795290889}
   m_Layer: 0
   m_Name: Cup
   m_TagString: Untagged
@@ -166,6 +167,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.001289887, y: 0.0012039426, z: 0.0012097607}
   m_Center: {x: 0.00004156584, y: 0.0000017580404, z: -0.000022469832}
+--- !u!114 &1610251994795290889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784751421819266701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2f7e309465bdd4c9700bc1e46acb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigeonTarget
+  minY: -0.5
+  rbs:
+  - {fileID: 5936921097521308333}
 --- !u!1 &4593544046364132456
 GameObject:
   m_ObjectHideFlags: 0

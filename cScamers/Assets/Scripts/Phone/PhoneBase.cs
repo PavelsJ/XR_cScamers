@@ -12,6 +12,7 @@ public class PhoneBase : MonoBehaviour
     [Header("Email Description")]
     [SerializeField] private Image popupImage;
     [SerializeField] private TMP_Text popupText;
+    [SerializeField] private Animator animator;
     
     [Header("Message Description")]
     [SerializeField] private GameObject messagePanel;
@@ -37,6 +38,7 @@ public class PhoneBase : MonoBehaviour
     {
         popupText.text = data.popup;
         popupImage.enabled = true;
+        animator.SetTrigger("Call");
 
         screenMaterial.color = Color.white;
 
@@ -48,9 +50,13 @@ public class PhoneBase : MonoBehaviour
 
     public void SpawnPhoneMessage(EventData data)
     {
+        popupText.text = data.popup;
+        popupImage.enabled = true;
+        animator.SetTrigger("Message");
+        
         messagePanel.SetActive(true);
         messageText.text = data.description;
-
+        
         screenMaterial.color = Color.white;
     }
     

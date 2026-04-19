@@ -7,5 +7,5 @@ public class PhoneEventData : EventData
 {
     [Header("Phone Event")]
     [SerializeField] private bool isMessage;
-    public bool IsMessage => isMessage;  
+    public bool IsMessage => isMessage;
 }
