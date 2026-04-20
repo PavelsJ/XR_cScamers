@@ -21436,7 +21436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8453377054889624308}
   m_Layer: 0
-  m_Name: SM_Scamer
+  m_Name: Scamer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
