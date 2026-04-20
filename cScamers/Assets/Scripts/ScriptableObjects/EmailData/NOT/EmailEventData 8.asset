@@ -15,10 +15,13 @@ MonoBehaviour:
   isScam: 1
   deviceType: 0
   popup: "You have an \nincoming email"
-  description: 'SPAM
+  subject: ...
+  description: 'Hello, Dear!
+
+    I was on vacation and took some pictures, take
+    a look!
 
 '
   nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
-  subject: ...
-  prophile: {fileID: 0}
+  isSpam: 0
