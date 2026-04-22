@@ -25,6 +25,14 @@ public class PhoneBase : MonoBehaviour
 
     private Material currentScreenMaterial;
     
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] audioClips;
+    
+    [SerializeField] private AudioSource callSource;
+    [SerializeField] private AudioClip callClip;
+
+    
     private void Awake()
     {
         if (screenMaterial == null) return;
@@ -41,6 +49,13 @@ public class PhoneBase : MonoBehaviour
         popupImage.enabled = true;
         animator.SetTrigger("Call");
 
+        if (callSource != null && callClip != null)
+        {
+            if(callSource.clip == null)
+                callSource.clip = callClip;
+            callSource.Play();
+        }
+        
         currentScreenMaterial.color = Color.white;
 
         if (phoneRoutine != null)
@@ -52,6 +67,8 @@ public class PhoneBase : MonoBehaviour
     public void SpawnPhoneMessage(EventData data)
     {
         ClearPhone();
+
+        PlaySelectedSound(0);
         
         popupText.text = data.popup;
         popupImage.enabled = true;
@@ -69,8 +86,14 @@ public class PhoneBase : MonoBehaviour
         
         popupText.text = data.popup;
         popupImage.enabled = true;
-
         currentScreenMaterial.color = Color.white;
+        
+        if (callSource != null && callClip != null)
+        {
+            if(callSource.clip == null)
+                callSource.clip = callClip;
+            callSource.Play();
+        }
 
         if (phoneRoutine != null)
             StopCoroutine(phoneRoutine);
@@ -81,6 +104,8 @@ public class PhoneBase : MonoBehaviour
     public void UpdatePhoneMessage(EventData data)
     {
         ClearPhone();
+        
+        PlaySelectedSound(0);
             
         messagePanel.SetActive(true);
         messageText.text = data.description;
@@ -95,6 +120,9 @@ public class PhoneBase : MonoBehaviour
 
         if (phoneRoutine != null)
             StopCoroutine(phoneRoutine);
+        
+        if (callSource != null )
+            callSource.Stop();
 
         currentScreenMaterial.color = Color.black;
 
@@ -129,5 +157,14 @@ public class PhoneBase : MonoBehaviour
 
         if (phoneRoutine != null)
             StopCoroutine(phoneRoutine);
+        
+        if (callSource != null )
+            callSource.Stop();
+    }
+    
+    private void PlaySelectedSound(int index)
+    {
+        if (audioSource != null  && audioClips.Length > 0)
+            audioSource.PlayOneShot(audioClips[index]);
     }
 }

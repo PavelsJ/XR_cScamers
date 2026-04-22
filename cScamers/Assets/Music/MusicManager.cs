@@ -95,7 +95,7 @@ public class MusicManager : MonoBehaviour
      
     private void ApplySavedVolumes()
     {
-        float musicVolume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        float musicVolume = PlayerPrefs.GetFloat("MusicVolume", 0.2f);
         float sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
         float voiceVolume = PlayerPrefs.GetFloat("VoiceVolume", 0.5f);
         

@@ -27,6 +27,10 @@ public class EmailBase : MonoBehaviour
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private Material screenMaterial;
     private Material currentScreenMaterial;
+    
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] audioClips;
 
     private void Awake()
     {
@@ -39,6 +43,7 @@ public class EmailBase : MonoBehaviour
     public void SpawnEmail(EventData data)
     {
         popupPanel.SetActive(true);
+        PlaySelectedSound(0);
         
         if (popupAnimationCoroutine != null)
             StopCoroutine(popupAnimationCoroutine);
@@ -71,7 +76,9 @@ public class EmailBase : MonoBehaviour
     public void UpdateEmail(EventData data)
     {
         ClearEmail();
-        
+
+        PlaySelectedSound(1);
+            
         subjectText.text = data.subject;
         descriptionText.text = data.description;
         
@@ -96,5 +103,11 @@ public class EmailBase : MonoBehaviour
         isOn = !isOn;
         emailPanel.SetActive(isOn);
         currentScreenMaterial.color = isOn ? Color.white : Color.black;
+    }
+    
+    private void PlaySelectedSound(int index)
+    {
+        if (audioSource != null  && audioClips.Length > 0)
+            audioSource.PlayOneShot(audioClips[index]);
     }
 }

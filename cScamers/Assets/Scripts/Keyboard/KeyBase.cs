@@ -10,6 +10,10 @@ public class KeyBase : MonoBehaviour
     [SerializeField] private Vector3 direction = Vector3.down;
     [SerializeField] private float pressSpeed = 8f;
     
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
+    
     private bool isPressed = false;
     
     private Vector3 startPos;
@@ -30,6 +34,8 @@ public class KeyBase : MonoBehaviour
             keyAction?.Invoke();
             isPressed = true;
             
+            PlaySelectedSound();
+            
             if (keyRoutine != null) StopCoroutine(keyRoutine);
             keyRoutine = StartCoroutine(SetKey(pressedPos));
         }
@@ -44,6 +50,12 @@ public class KeyBase : MonoBehaviour
             if (keyRoutine != null) StopCoroutine(keyRoutine);
             keyRoutine = StartCoroutine(SetKey(startPos));
         }
+    }
+
+    private void PlaySelectedSound()
+    {
+        if (audioSource != null  && audioClip != null)
+            audioSource.PlayOneShot(audioClip);
     }
 
     private IEnumerator Delay(float delay)

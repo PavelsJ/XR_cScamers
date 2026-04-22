@@ -23,6 +23,10 @@ public class PrinterBase : MonoBehaviour
     
     private Material currentScreenMaterial;
     
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
+    
     private void Awake()
     {
         if (screenMaterial == null) return;
@@ -64,6 +68,7 @@ public class PrinterBase : MonoBehaviour
     private void ThrowLetter(GameObject paper, float force = 5f)
     {
         if (paper == null) return;
+        PlaySelectedSound();
 
         Rigidbody rb = paper.GetComponent<Rigidbody>();
         if (rb == null) return;
@@ -72,5 +77,11 @@ public class PrinterBase : MonoBehaviour
 
         rb.AddForce(direction * force, ForceMode.Impulse);
         rb.AddTorque(Random.insideUnitSphere * force, ForceMode.Impulse);
+    }
+    
+    private void PlaySelectedSound()
+    {
+        if (audioSource != null  && audioClip != null)
+            audioSource.PlayOneShot(audioClip);
     }
 }

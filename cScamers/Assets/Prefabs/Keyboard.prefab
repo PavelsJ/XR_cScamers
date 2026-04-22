@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4014651734110053238}
   - component: {fileID: 6199940426031635141}
   - component: {fileID: 2613376382254902347}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,12 +109,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: PlayerPressedKey1
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 389783163495193657}
   - component: {fileID: 978989530537005375}
   - component: {fileID: 4081292050456896972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,12 +253,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: PlayerPressedKey2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -336,8 +336,8 @@ MonoBehaviour:
   leftKey: 0
   rightKey: 0
   keys:
-  - {fileID: 6199940426031635141}
   - {fileID: 978989530537005375}
+  - {fileID: 6199940426031635141}
 --- !u!1 &5907534479013620705
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6534749326215410011}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 5956188621605264151}
   - component: {fileID: 1306593936900098419}
   - component: {fileID: 8821037756292985516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 849860154495596271}
   - component: {fileID: 1778834252162316162}
   - component: {fileID: 5776263995257462621}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
