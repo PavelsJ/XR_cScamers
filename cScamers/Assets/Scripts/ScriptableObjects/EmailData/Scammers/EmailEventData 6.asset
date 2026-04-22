@@ -15,6 +15,7 @@ MonoBehaviour:
   isScam: 1
   deviceType: 0
   popup: "You have an \nincoming email"
+  subject: ...
   description: 'Dear, Aleksandra!!
 
 
@@ -23,11 +24,11 @@ MonoBehaviour:
     link below:
 
 
-    www.givemeyourmoney.lv
+    <color=blue>www.givemeyourmoney.lv</color>
 
 
-    Thank you for your payment.'
+    Thank you
+    for your payment.'
   nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
-  subject: ...
-  prophile: {fileID: 0}
+  isSpam: 0

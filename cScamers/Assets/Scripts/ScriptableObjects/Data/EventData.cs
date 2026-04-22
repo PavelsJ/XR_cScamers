@@ -18,7 +18,4 @@ public class EventData : ScriptableObject, IEventData
     [Header("Next Events")]
     public EventData nextEventsIfScammer;
     public EventData nextEventsIfNormal;
-    
-    [Header("Spam")] 
-    public bool isSpam = false;
 }

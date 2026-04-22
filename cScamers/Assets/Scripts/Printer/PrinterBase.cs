@@ -40,6 +40,9 @@ public class PrinterBase : MonoBehaviour
         isPrinting = true;
         currentData = data;
         printLight.SetLight(true);
+        
+        PrinterEventData printData = data as PrinterEventData;
+        if (printData != null && printData.isSpam) StartSpam();
     }
 
     public void StartLetter()
@@ -55,6 +58,22 @@ public class PrinterBase : MonoBehaviour
 
         paperBase.UpdateInfo(currentData);
         ThrowLetter(paper, 2);
+        isPrinting = false;
+    }
+
+    public void StartSpam()
+    {
+        if (!isPrinting) return;
+
+        if (currentData == null) return;
+        popupText.text = currentData.popup;
+
+        GameObject paper = Instantiate(printPrefab, spawnPoint.position, spawnPoint.rotation);
+        var paperBase = paper.GetComponent<LetterBase>();
+        if (paperBase == null) return;
+
+        paperBase.UpdateImage(currentData);
+        ThrowLetter(paper, 5);
         isPrinting = false;
     }
     

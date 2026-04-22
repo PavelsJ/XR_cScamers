@@ -54,6 +54,7 @@ public class EventManager : MonoBehaviour
         {
             EventType.Email,
             EventType.Phone,
+            EventType.Printer
         };
         
         if (lastEventType.HasValue)
@@ -66,6 +67,7 @@ public class EventManager : MonoBehaviour
         {
             case EventType.Email: return emailManager;
             case EventType.Phone: return phoneManager;
+            case EventType.Printer: return printerManager;
         }
 
         return null;
