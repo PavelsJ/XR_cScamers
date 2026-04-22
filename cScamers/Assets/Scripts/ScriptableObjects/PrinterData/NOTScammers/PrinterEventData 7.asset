@@ -17,7 +17,7 @@ MonoBehaviour:
   popup: Ready to Print...
   subject: ...
   description: Babula
-  nextEventsIfScammer: {fileID: 0}
+  nextEventsIfScammer: {fileID: 11400000}
   nextEventsIfNormal: {fileID: 0}
   isSpam: 1
   spamSprite: {fileID: 21300000, guid: eec434f2acddfbe40b825aac3afdbc21, type: 3}
