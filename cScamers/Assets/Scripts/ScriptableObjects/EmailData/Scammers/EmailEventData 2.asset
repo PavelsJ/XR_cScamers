@@ -15,11 +15,10 @@ MonoBehaviour:
   isScam: 1
   deviceType: 0
   popup: "You have an \nincoming email"
-  subject: ...
+  subject: Information update
   description: "Hi, dear customer! \r\n\r\nYourFavouriteShop want to inform you about
     the need to update your private information. Please follow this link to update
     necessary information to keep using your suctomer discount card.\r\n\r\n<color=blue>www.notascam.lv</color>\r\n\r\nThank
     you and have a nice day!"
   nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
-  isSpam: 0

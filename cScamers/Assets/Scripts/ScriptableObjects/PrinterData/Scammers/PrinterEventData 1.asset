@@ -15,12 +15,12 @@ MonoBehaviour:
   isScam: 1
   deviceType: 2
   popup: Ready to Print...
+  subject: Info update
   description: 'Please write your bank account number!
 
 
     Thank you!'
   nextEventsIfScammer: {fileID: 0}
   nextEventsIfNormal: {fileID: 0}
-  subject: ...
   isSpam: 0
   spamSprite: {fileID: 0}
