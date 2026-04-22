@@ -121,6 +121,11 @@ public class EventManager : MonoBehaviour
             return;
         }
         
+        if (!correct)
+        {
+            GameManager.Instance.SpawnScammer();
+        }
+        
         StartRandomEvent();
     }
 }

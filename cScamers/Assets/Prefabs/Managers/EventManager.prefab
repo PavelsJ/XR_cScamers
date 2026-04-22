@@ -168,8 +168,7 @@ MonoBehaviour:
   descriptionText: {fileID: 0}
   printerBase: {fileID: 0}
   printerEvents:
-  - {fileID: 11400000, guid: f0134809595482d44ab8f7dfa474f1c2, type: 2}
-  - {fileID: 11400000, guid: 67da0333b20b33e469ec74141f83f406, type: 2}
+  - {fileID: 11400000, guid: 659cd64b3528c9041969361031bf36c2, type: 2}
 --- !u!1 &6960744992851886960
 GameObject:
   m_ObjectHideFlags: 0
