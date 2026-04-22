@@ -23,5 +23,4 @@ MonoBehaviour:
 
 '
   nextEventsIfScammer: {fileID: 0}
-  nextEventsIfNormal: {fileID: 0}
-  isSpam: 0
+  nextEventsIfNormal: {fileID: 11400000, guid: f254a847125e41b4b9eb3bd1d7d74c2f, type: 2}
