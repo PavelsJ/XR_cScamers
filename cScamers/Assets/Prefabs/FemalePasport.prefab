@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3758502667288843650}
   - component: {fileID: 687754489363501442}
   - component: {fileID: 2051632475487824597}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: BirthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 06.04.1996
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
+  m_sharedMaterial: {fileID: -3626055392574177936, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.04
+  m_fontSize: 0.05
   m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -150,7 +150,8 @@ GameObject:
   - component: {fileID: 2475752965961331499}
   - component: {fileID: 7138863947068957909}
   - component: {fileID: 6234504035483843785}
-  m_Layer: 0
+  - component: {fileID: 3232607969230493723}
+  m_Layer: 6
   m_Name: FemalePasport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,8 +259,110 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed2f7e309465bdd4c9700bc1e46acb51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PigeonTarget
-  minY: -0.5
-  rbs: []
+  minY: -0.7
+  rbs:
+  - {fileID: 2475752965961331499}
+  audioSource: {fileID: 3232607969230493723}
+  audioClip: {fileID: 8300000, guid: 251602b4f3869a144994b1022575fab6, type: 3}
+  dropClip: {fileID: 8300000, guid: 7b8d175ce6d00f04da0249b3b0ce8191, type: 3}
+  minVelocity: 1
+--- !u!82 &3232607969230493723
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2735309806731886866}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 184248805989202348, guid: 52a53d23a14b23a4a90873cc5a3333f1, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2989681310543650447
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +374,7 @@ GameObject:
   - component: {fileID: 745090196763130665}
   - component: {fileID: 6184741445921833408}
   - component: {fileID: 2096381680500723952}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: PersonalNOText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,8 +430,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 060496-20683
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
+  m_sharedMaterial: {fileID: -3626055392574177936, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -352,7 +455,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.03
+  m_fontSize: 0.05
   m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -408,7 +511,7 @@ GameObject:
   - component: {fileID: 7335442429326959333}
   - component: {fileID: 5389034415688449042}
   - component: {fileID: 3308596722641058786}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: NationalityText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,10 +565,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Latvijas
+  m_text: 'Latvian
+
+'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
+  m_sharedMaterial: {fileID: -3626055392574177936, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -489,7 +594,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.06
+  m_fontSize: 0.1
   m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -546,7 +651,8 @@ GameObject:
   - component: {fileID: 8653491832580858831}
   - component: {fileID: 3284557621208071993}
   - component: {fileID: 5997393262932407126}
-  m_Layer: 0
+  - component: {fileID: 1840920423789920025}
+  m_Layer: 6
   m_Name: '[BuildingBlock] HandGrabInstallationRoutine'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,6 +758,91 @@ MonoBehaviour:
   _releaseDistance: 0
   _resetGrabOnGrabsUpdated: 1
   _physicsGrabbable: {fileID: 0}
+--- !u!114 &1840920423789920025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4604370941221525957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableUnityEventWrapper
+  _interactableView: {fileID: 3284557621208071993}
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6234504035483843785}
+        m_TargetAssemblyTypeName: PigeonTarget, Assembly-CSharp
+        m_MethodName: DisableFallSignal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6234504035483843785}
+        m_TargetAssemblyTypeName: PigeonTarget, Assembly-CSharp
+        m_MethodName: EnableFallSignal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6234504035483843785}
+        m_TargetAssemblyTypeName: PigeonTarget, Assembly-CSharp
+        m_MethodName: DisableFallSignal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6234504035483843785}
+        m_TargetAssemblyTypeName: PigeonTarget, Assembly-CSharp
+        m_MethodName: EnableFallSignal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _whenInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5357043509585786998
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +854,7 @@ GameObject:
   - component: {fileID: 8463339235869912693}
   - component: {fileID: 3864509300093489137}
   - component: {fileID: 6074687887571433928}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,8 +910,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Aleksandra '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
+  m_sharedMaterial: {fileID: -3626055392574177936, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -744,7 +935,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.06
+  m_fontSize: 0.1
   m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -800,7 +991,7 @@ GameObject:
   - component: {fileID: 4214076164704953715}
   - component: {fileID: 8369668126965939582}
   - component: {fileID: 5373659769631400266}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: ExpiryText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,8 +1047,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 12.05.2028
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
+  m_sharedMaterial: {fileID: -3626055392574177936, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -881,7 +1072,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.04
+  m_fontSize: 0.05
   m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -937,7 +1128,7 @@ GameObject:
   - component: {fileID: 4859697154249385638}
   - component: {fileID: 5299010779498469850}
   - component: {fileID: 5738925170092354189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Female
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1220,7 @@ GameObject:
   - component: {fileID: 4628594214735270332}
   - component: {fileID: 1590841968913966707}
   - component: {fileID: 3635960176784250311}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: PasportCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,7 +1326,7 @@ GameObject:
   - component: {fileID: 977905602597678750}
   - component: {fileID: 696902312334388499}
   - component: {fileID: 7883367907643919476}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: SurnameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1189,10 +1380,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Liepi\u0146a"
+  m_text: Liepina
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
+  m_sharedMaterial: {fileID: -3626055392574177936, guid: 0dc59a49d5709144ebe332288d6dcac8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1216,7 +1407,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.06
+  m_fontSize: 0.1
   m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 1

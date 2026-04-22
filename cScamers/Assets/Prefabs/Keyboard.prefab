@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 4014651734110053238}
   - component: {fileID: 6199940426031635141}
   - component: {fileID: 2613376382254902347}
-  m_Layer: 0
+  - component: {fileID: 664513391108322422}
+  m_Layer: 6
   m_Name: Base_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,12 +110,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: PlayerPressedKey1
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -123,6 +124,8 @@ MonoBehaviour:
   pressDepth: 0.02
   direction: {x: 0, y: -1, z: 0}
   pressSpeed: 8
+  audioSource: {fileID: 664513391108322422}
+  audioClip: {fileID: 8300000, guid: 7317fe5a04c000c489467abd8d15cd82, type: 3}
 --- !u!65 &2613376382254902347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -144,6 +147,103 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.003, y: 0.003, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &664513391108322422
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598255480594800209}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 184248805989202348, guid: 52a53d23a14b23a4a90873cc5a3333f1, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &700659116498344636
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +257,8 @@ GameObject:
   - component: {fileID: 389783163495193657}
   - component: {fileID: 978989530537005375}
   - component: {fileID: 4081292050456896972}
-  m_Layer: 0
+  - component: {fileID: 8067130841634881633}
+  m_Layer: 6
   m_Name: Base_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,12 +354,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: PlayerPressedKey2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -267,6 +368,8 @@ MonoBehaviour:
   pressDepth: 0.02
   direction: {x: 0, y: -1, z: 0}
   pressSpeed: 8
+  audioSource: {fileID: 8067130841634881633}
+  audioClip: {fileID: 8300000, guid: 7317fe5a04c000c489467abd8d15cd82, type: 3}
 --- !u!65 &4081292050456896972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -288,6 +391,103 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.003, y: 0.003, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &8067130841634881633
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700659116498344636}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 184248805989202348, guid: 52a53d23a14b23a4a90873cc5a3333f1, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &707881556325279417
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,8 +536,8 @@ MonoBehaviour:
   leftKey: 0
   rightKey: 0
   keys:
-  - {fileID: 6199940426031635141}
   - {fileID: 978989530537005375}
+  - {fileID: 6199940426031635141}
 --- !u!1 &5907534479013620705
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6534749326215410011}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +582,7 @@ GameObject:
   - component: {fileID: 5956188621605264151}
   - component: {fileID: 1306593936900098419}
   - component: {fileID: 8821037756292985516}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +672,7 @@ GameObject:
   - component: {fileID: 849860154495596271}
   - component: {fileID: 1778834252162316162}
   - component: {fileID: 5776263995257462621}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}

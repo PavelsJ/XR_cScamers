@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using TMPro;
 using UnityEngine;
@@ -14,6 +15,19 @@ public class LetterBase : MonoBehaviour
         
         titleText.text = data.subject;
         descriptionText.text = data.description;
+    }
+
+    public void UpdateImage(EventData data)
+    {
+        PrinterEventData printData = data as PrinterEventData;
+        if (printData != null && printData.isSpam)
+        {
+            ClearLetter();
+            
+            backgroundImage.enabled = true;
+            backgroundImage.sprite = printData.spamSprite;
+            titleText.text = data.subject;
+        }
     }
 
     private void ClearLetter()

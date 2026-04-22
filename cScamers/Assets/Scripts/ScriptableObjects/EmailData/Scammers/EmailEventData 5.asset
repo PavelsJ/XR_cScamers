@@ -15,6 +15,7 @@ MonoBehaviour:
   isScam: 1
   deviceType: 0
   popup: "You have an \nincoming email"
+  subject: ...
   description: 'Good day!
 
 
@@ -23,8 +24,7 @@ MonoBehaviour:
     autentification code on your phone.
 
 
-    www.scammed.you'
+    <color=blue>www.scammed.you</color>'
   nextEventsIfScammer: {fileID: 11400000, guid: fc2e2c4e2684cfa4fb463ac4dea6fa4b, type: 2}
   nextEventsIfNormal: {fileID: 0}
-  subject: ...
-  prophile: {fileID: 0}
+  isSpam: 0
